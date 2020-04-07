@@ -1,0 +1,195 @@
+.bottom-tab-bar {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  height: 3.3rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #fff;
+  align-items: center;
+  box-shadow: 0px -2px 5px 0px rgba(176, 176, 176, 1);
+  overflow: hidden;
+
+  .tab-bar-link {
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $black_color;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4px;
+      margin-top: 4px;
+      font: 600 13px $secondary_font;
+
+      i {
+        font-size: 2em;
+        &:hover {
+          color: $primary_color;
+        }
+      }
+      &:hover {
+        color: $primary_color;
+      }
+    }
+
+    //HAMBURGER MENU 
+    &:last-child {
+      input {
+        display: none;
+      }
+
+      label {
+        margin: auto 0;
+        position: relative;
+        z-index: 999;
+        cursor: pointer;
+
+        b {
+
+          width: 40px;
+          height: 40px;
+          display: block;
+          position: relative;
+          cursor: pointer;
+          transition: background 200ms ease;
+
+
+          i {
+
+            display: block;
+            background: #333;
+            width: 24px;
+            height: 4px;
+            position: absolute;
+            left: 8px;
+            top: 11px;
+            border-radius: 2px;
+            transform-origin: 20px 4px;
+            transition: transform 200ms cubic-bezier(0.090, 0.920, 0.000, 1.435), opacity 500ms ease;
+
+            &:nth-child(2) {
+              top: 18px
+            }
+
+            &:nth-child(3) {
+              transform-origin: 26px 4px;
+              top: 25px;
+            }
+
+          }
+
+        }
+
+      }
+
+      menu {
+        background: #fff;
+        width: 70%;
+        height: 0;
+        opacity: 1;
+        overflow: auto;
+        ;
+        transition: height 200ms ease;
+        position: fixed;
+        z-index: 990;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+
+        li {
+          border-top: #a9a9a9a9 1px solid;
+          margin: 0;
+          list-style: none;
+          width: 100%;
+
+          //LOGO
+          &:first-child {
+            position: absolute;
+            top: 1rem;
+            border-style: none;
+
+            a {
+              color: #000;
+              text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+              text-transform: capitalize;
+              font: 400 3em $logo_font;
+
+              #fit-text {
+                color: $primary_color;
+              }
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 60px;
+
+          }
+
+          a {
+
+            padding: 20px 0;
+            font: 500 18px $secondary_font;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            color: $black_color;
+            display: block;
+            border-bottom: rgba(255, 255, 255, .2) 1px solid;
+
+            &:hover {
+              background: rgba(0, 0, 0, .1);
+            }
+
+          }
+
+        }
+
+      }
+
+      #nav:checked~label {
+
+        strong {
+          color: rgba(255, 255, 255, .25);
+        }
+
+        b {
+
+          transition-delay: 100ms;
+
+          i {
+            background-color: $primary_color;
+
+            &:nth-child(1) {
+              transform: rotate(45deg) translate(6px, 11px);
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:nth-child(3) {
+              transform: rotate(-45deg) translate(10px, -14px);
+            }
+
+          }
+
+        }
+
+      }
+
+      #nav:checked~menu {
+        height: 100%;
+      }
+
+
+    }
+  }
+}
+

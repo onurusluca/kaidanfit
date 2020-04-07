@@ -1,0 +1,72 @@
+//KaidanFit common.scss
+//All the variables, mixings and functions
+
+
+//Fonts
+$primary_font: 'Montserrat', sans-serif; //For text and stuff
+$secondary_font: 'Titillium Web', sans-serif; //For navigation
+$logo_font: 'Raleway', sans-serif; //For Titles
+
+//Colors
+$primary_color: rgb(12, 149, 228);
+$secondary_color: rgb(35, 37, 35);
+
+$white_color: rgba(255, 255, 255, 0.733);
+$black_color: #333;
+
+$text-color: #38383a;
+
+//Media Queries
+$xs_mobile:'(max-width: 420px)';
+$sm_mobile:'only screen and (min-width: 421px) and (max-width: 575px)';
+$large_mobile: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$tab_device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$medium_device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$big_screen:'only screen and (min-width: 1200px) and (max-width: 1440px)';
+$extra_big_screen: 'only screen and (min-width: 1200px) and (max-width: 3640px)';
+  
+
+//Commons
+:root {
+    font-size: 16px;
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: $primary_color;
+
+}
+
+h1, h2, h3 {
+    font:600 2.5rem/3.125rem $secondary_font $black_color;
+    line-height: 1.5;
+}
+
+p {
+    font: 400 1.4rem/1.625rem $primary_color $text-color;
+}
+
+
+//Scrollbar
+
+body::-webkit-scrollbar {
+    width: 0.85rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: $black_color;
+
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: $primary_color;
+    width: 1.85rem;
+  }
