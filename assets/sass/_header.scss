@@ -27,13 +27,13 @@
       font: 600 13px $secondary_font;
 
       i {
-        font-size: 2em;
-        &:hover {
-          color: $primary_color;
-        }
+        font-size: 1.8em;
+
       }
+
       &:hover {
         color: $primary_color;
+
       }
     }
 
@@ -87,9 +87,10 @@
 
       }
 
+      //Hamburger menu
       menu {
         background: #fff;
-        width: 70%;
+        width: 60%;
         height: 0;
         opacity: 1;
         overflow: auto;
@@ -119,7 +120,7 @@
               color: #000;
               text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
               text-transform: capitalize;
-              font: 400 3em $logo_font;
+              font: 400 2.5em $logo_font;
 
               #fit-text {
                 color: $primary_color;
@@ -127,15 +128,27 @@
             }
           }
 
+          //Social Media Buttons
           &:last-child {
-            margin-bottom: 60px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+
+            a {
+              img {
+                height: 1.7em;
+                padding-left: 1.2em;
+
+              }
+            }
+
 
           }
 
           a {
 
             padding: 20px 0;
-            font: 500 18px $secondary_font;
+            font: 500 16px $secondary_font;
             text-transform: uppercase;
             text-decoration: none;
             text-align: center;
@@ -192,4 +205,3 @@
     }
   }
 }
-
