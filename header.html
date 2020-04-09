@@ -1,5 +1,7 @@
+<!-- MOBILE MENU -->
 <nav role="navigation">
-    <ul class="bottom-tab-bar">
+    <!-- Bottom bar -->
+    <ul id="bottom-tab-bar">
         <li class="tab-bar-link"><a href="">
                 <i class="fas fa-heartbeat"></i>Sağlık</a></li>
         <li class="tab-bar-link"><a href="">
@@ -8,21 +10,64 @@
                 <i class="fas fa-running"></i>Fitness</a></li>
         <!-- <li class="tab-bar-link"><a href="">
             <i class="far fa-caret-square-down"></i>asdas</a></li> -->
+
+        <!-- Hamburger Menu -->
         <li class="tab-bar-link">
             <input id="nav" type="checkbox" />
             <label for="nav">
                 <b><i></i><i></i><i></i></b>
             </label>
             <menu>
-        <li><a href="#">Kaidan<span id="fit-text">Fit</span></a></li>
+        <li><a href="#">Kaidan<span>Fit</span><span id="dot">.</span></a></li>
         <li><a href="#">Bize Yazın</a></li>
         <li><a href="#">KaidanFit Nedir?</a></li>
-        <li><a href="#">Sit Amet</a></li>
+        <li><a href="#">Sakiko</a></li>
         <li><a href=""><a href=""><img src="./assets/img/buttons/instagram.png" alt=""></a>
                 <a href=""><img src="./assets/img/buttons/facebook.png" alt=""></a>
                 <a href=""> <img src="./assets/img/buttons/youtube.png" alt=""></a>
             </a></li>
         </menu>
+        </li>
+    </ul>
+</nav>
+
+<!-- NAVIGATION BAR -->
+
+<nav role="navigation" class="nav-bar">
+    <ul id="nav-menu">
+        <!-- Logo -->
+        <div id="brand"> <a href="" class="nav-link" id="brand-logo">kaidan<span id="spann">fit</span></a>
+        </div> 
+        <!-- Nav links -->
+        <li class="nav-row">
+            <a href="#" class="nav-link">Fitness <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+            </ul>
+        </li>
+        <li class="nav-row">
+            <a href="" class="nav-link">Beslenme <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+            </ul>
+        </li>
+        <li class="nav-row">
+            <a href="" class="nav-link">Sağlık <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+                <li><a class="dropdown-links" href="">Kilo Ver</a></li>
+            </ul>
+        </li>
+        <li class="nav-row">
+            <a href="" class="nav-link">Bize Yazın!</a>
         </li>
     </ul>
 </nav>
