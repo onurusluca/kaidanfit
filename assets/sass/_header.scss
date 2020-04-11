@@ -1,7 +1,19 @@
 #header {
-  height: 100vh;
+  height: 120vh;
   position: relative;
-  background-color: #e2eefc;
+  background-image: url(/assets/img/landing-page/main-photo.png); // linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: saturation;
+
+
+  @media #{$sm_mobile, $xs_mobile} {
+    background-image: none;
+    background-color: #9AB0BB;
+  }
+
 
 }
 
@@ -37,272 +49,255 @@
     #nav-2,
     #nav-3 {
       display: none;
-
     }
 
-   
-      text-decoration: none;
-      text-transform: capitalize;
-      color: $black_color;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $black_color;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    margin-top: 4px;
+    font: 600 13px $secondary_font;
+
+    label {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
-      padding: 4px;
-      margin-top: 4px;
-      font: 600 13px $secondary_font;
+    }
 
-      label {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-      }
+    i {
+      font-size: 1.8em;
 
-      i {
-        font-size: 1.8em;
+    }
 
-      }
+    //Menu toggle menus
+    .toggle-menu {
+      background: #fff;
+      opacity: 1;
+      height: 0;
+      transition: height 100ms ease;
+      position: fixed;
+      bottom: 3.3rem;
+      left: 0;
+      right: 0;
+      z-index: 870;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
 
-      //Menu toggle menus
-      .toggle-menu {
-        background: #fff;
-        opacity: 1;
-        height: 0;
-        overflow: auto;
-        transition: height 100ms ease;
-        position: fixed;
-        bottom: 3.3rem;
-        left: 0;
-        right: 0;
-        z-index: 870;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
+      li {
+        text-align: center;
+        width: 100%;
+        color: $black_color;
+        padding: 1em;
+        border-bottom: 1px solid rgb(212, 210, 210);
 
-        li {
-          text-align: center;
-          width: 100%;
+        .dropup-links {
           color: $black_color;
-          padding: 1em;
-          border-bottom: 1px solid rgb(212, 210, 210);
-          .dropup-links {
-            color: $black_color;
-          }
-        }
-      }
-
-      //Styling for inputs
-      #fitness-menu {
-        height: 0;
-      }
-
-      #beslenme-menu {
-        height: 0;
-      }
-
-      #saglik-menu {
-        height: 0;
-      }
-
-      #fit-link {
-        color: blue !important;
-      }
-
-      //Inputs for menu toggle
-
-     
-      #nav-1:checked~label {
-        color: $primary_color;
-        ul {
-          height: 210px;
-        }
-      }
-      #nav-2:checked~label {
-        color: $primary_color;
-        ul {
-          height: 210px;
-        }
-      }
-      #nav-3:checked~label {
-        color: $primary_color;
-        ul {
-          height: 210px;
         }
       }
     }
 
-    //HAMBURGER MENU CONTANIER
-    &:last-child {
-      z-index: 890;
+    //Styling for inputs
+    #fitness-menu {
+      height: 0;
+    }
 
-      //The input
-      input {
-        display: none;
+    #beslenme-menu {
+      height: 0;
+    }
+
+    #saglik-menu {
+      height: 0;
+    }
+
+    #fit-link {
+      color: blue !important;
+    }
+
+    //Inputs for menu toggle
+
+
+    #nav-1:checked~label {
+      color: $primary_color;
+
+      ul {
+        height: 210px;
       }
+    }
 
-      //Ham icon
-      label {
-        margin: auto 0;
-        position: relative;
-        z-index: 900;
-        cursor: pointer;
+    #nav-2:checked~label {
+      color: $primary_color;
 
-        b {
-
-          width: 40px;
-          height: 40px;
-          display: block;
-          position: relative;
-          cursor: pointer;
-          transition: background 200ms ease;
-
-
-          i {
-
-            display: block;
-            background: #333;
-            width: 24px;
-            height: 4px;
-            position: absolute;
-            left: 8px;
-            top: 11px;
-            border-radius: 2px;
-            transform-origin: 20px 4px;
-            transition: transform 200ms cubic-bezier(0.090, 0.920, 0.000, 1.435), opacity 500ms ease;
-
-            &:nth-child(2) {
-              top: 18px
-            }
-
-            &:nth-child(3) {
-              transform-origin: 26px 4px;
-              top: 25px;
-            }
-
-          }
-
-        }
-
+      ul {
+        height: 210px;
       }
+    }
 
-      //Ham menu
-      menu {
-        background: #fff;
-        width: 60%;
-        height: 0;
-        opacity: 1;
-        overflow: auto;
-        transition: height 200ms ease;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: flex-end;
+    #nav-3:checked~label {
+      color: $primary_color;
 
-        li {
-          border-top: #a9a9a9a9 1px solid;
-          margin: 0;
-          list-style: none;
-          width: 100%;
-          height: 3.5rem;
-
-          //LOGO
-          &:first-child {
-            position: absolute;
-            top: 1rem;
-            border-style: none;
-
-            a {
-              color: black;
-              text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
-              font: 400 2.5em $logo_font;
-              text-transform: capitalize;
-              outline-style: 1px solid ted;
-
-              span {
-                color: $primary_color;
-              }
-            }
-          }
-
-          //Social Media Buttons
-          &:last-child {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-
-            a {
-              img {
-                height: 1.8em;
-                padding-left: 1.2em;
-
-              }
-            }
-
-
-          }
-
-          //Ham link
-          a {
-            align-items: center;
-            padding: 10px 0;
-            font: 500 16px $secondary_font;
-            text-transform: capitalize;
-            text-decoration: none;
-            text-align: center;
-            color: $black_color;
-            display: block;
-            border-bottom: rgba(255, 255, 255, .2) 1px solid;
-
-            &:hover {
-              background: rgba(0, 0, 0, .1);
-            }
-
-          }
-
-        }
-
+      ul {
+        height: 210px;
       }
-
-      #nav:checked~label {
-
-        //Hamburger icon animation
-        b {
-
-          transition-delay: 100ms;
-
-          i {
-            background-color: $primary_color;
-
-            &:nth-child(1) {
-              transform: rotate(45deg) translate(6px, 11px);
-            }
-
-            &:nth-child(2) {
-              opacity: 0;
-            }
-
-            &:nth-child(3) {
-              transform: rotate(-45deg) translate(10px, -14px);
-            }
-
-          }
-
-        }
-
-      }
-
-      //Input check for ham menu
-      #nav:checked~menu {
-        height: 100%;
-      }
-
-
     }
   }
+
+  //HAMBURGER MENU CONTANIER
+  &:last-child {
+    z-index: 890;
+
+    //The input
+    input {
+      display: none;
+    }
+
+    //Ham icon
+    label {
+      margin: auto 0;
+      position: relative;
+      z-index: 900;
+      cursor: pointer;
+
+      b {
+
+        width: 40px;
+        height: 40px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        transition: background 200ms ease;
+
+
+        i {
+
+          display: block;
+          background: #333;
+          width: 24px;
+          height: 4px;
+          position: absolute;
+          left: 8px;
+          top: 11px;
+          border-radius: 2px;
+          transform-origin: 20px 4px;
+          transition: transform 200ms cubic-bezier(0.090, 0.920, 0.000, 1.435), opacity 500ms ease;
+
+          &:nth-child(2) {
+            top: 18px
+          }
+
+          &:nth-child(3) {
+            transform-origin: 26px 4px;
+            top: 25px;
+          }
+
+        }
+
+      }
+
+    }
+
+    //Ham menu
+    menu {
+      background: #fff;
+      width: 60%;
+      height: 0;
+      opacity: 1;
+      transition: height 200ms ease;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-end;
+
+      li {
+        border-top: #a9a9a9a9 1px solid;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        height: 3.5rem;
+
+        //Social Media Buttons
+        &:last-child {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+
+          a {
+            img {
+              height: 1.8em;
+              padding-left: 1.2em;
+
+            }
+          }
+
+
+        }
+
+        //Ham link
+        a {
+          align-items: center;
+          padding: 10px 0;
+          font: 500 16px $secondary_font;
+          text-transform: capitalize;
+          text-decoration: none;
+          text-align: center;
+          color: $black_color;
+          display: block;
+          border-bottom: rgba(255, 255, 255, .2) 1px solid;
+
+          &:hover {
+            background: rgba(0, 0, 0, .1);
+          }
+
+        }
+
+      }
+
+    }
+
+    #nav:checked~label {
+
+      //Hamburger icon animation
+      b {
+
+        transition-delay: 100ms;
+
+        i {
+          background-color: $primary_color;
+
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 11px);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(10px, -14px);
+          }
+
+        }
+
+      }
+
+    }
+
+    //Input check for ham menu
+    #nav:checked~menu {
+      height: 50%;
+    }
+
+
+  }
+}
 
 
 /////////////////////////////////////////////
@@ -330,7 +325,6 @@
   overflow: hidden;
   justify-content: flex-end;
   align-items: center;
-  box-shadow: 0px 2px 4px 0px rgba(176, 176, 176, 1);
 
 
   //Logo
@@ -338,7 +332,7 @@
 
     padding: 0;
     position: absolute;
-    left: 1rem;
+    left: 3rem;
     top: 1rem;
 
     //Logo effect
@@ -350,7 +344,7 @@
       width: 100%;
       height: 100%;
       max-width: 0;
-      background: rgb(0, 0, 0);
+      background: rgb(255, 255, 255);
       opacity: 0.4;
       filter: alpha(opacity=40);
       transition: none;
@@ -364,7 +358,7 @@
       line-height: 1em;
       overflow: hidden;
       transition: 300ms all ease-in;
-      color: $black_color;
+      color: #333;
 
       #spann {
         color: #fff;
@@ -395,16 +389,15 @@
 
 
   .nav-row {
-    padding: 5rem 0.8rem;
-
-    &:hover {
-      background: rgb(248, 245, 245);
-    }
+    justify-content: center;
+    color: $black_color;
+    padding: 100% 1em;
 
     .dropdown {
       text-align: center;
       position: absolute;
       margin-top: 0;
+      margin-left: -4em;
       min-width: auto;
       border: none;
       border-radius: 4px;
@@ -412,7 +405,6 @@
       border-bottom: 1px solid rgb(82, 81, 81);
       box-shadow: 0px 2px 4px 0px rgba(176, 176, 176, 1);
       transition: all 1s linear;
-
       display: none;
 
 
@@ -433,6 +425,7 @@
           text-decoration: none;
           text-transform: none;
           font-weight: 500;
+          margin: auto 3em;
         }
       }
 
@@ -443,16 +436,14 @@
 
     //Nav links
     .nav-link {
-      color: $black_color;
       font-weight: 500;
       font-size: 1.1em;
-      transition: all 500ms ease;
-      padding: 100% auto;
-
+      transition: all 200ms ease;
+      color: $black_color;
 
       &:hover {
-        color: #000;
-        text-decoration: underline;
+        color: rgb(83, 82, 82);
+
       }
 
       //Chevron
@@ -468,18 +459,11 @@
 
     }
 
-
+    @media #{$tab_device} {
+      padding: 100% 0;
+    }
 
   }
 }
 }
 
-//Skew
-.skewed {
-  width: 100%;
-  height: 22vh;
-  background: #e2eefc;
-  z-index: 0;
-  transform: skewY(6deg);
-  transform-origin: top right;
-}

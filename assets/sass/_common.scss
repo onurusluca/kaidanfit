@@ -40,7 +40,8 @@ $extra_big_screen: 'only screen and (min-width: 1200px)';
 
 body,
 html,
-main {
+main 
+header{
     width: 100%;
     height: 100%;
     font-family: $primary_font;
@@ -52,7 +53,7 @@ main {
 h1,
 h2,
 h3 {
-    font: 600 2.5rem/3.125rem $secondary_font $black_color;
+    font: 600 2.5rem $primary_font $black_color;
     line-height: 1.4;
 }
 
