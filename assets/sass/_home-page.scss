@@ -1,28 +1,21 @@
+main {
+    margin: 1rem;
+    justify-content: center;
+}
+
+
+
+
 //Logo for mobile
 #mobile-brand {
-
+    
+    overflow: hidden;
     padding: 0;
     margin-top: 1em;
     margin-left: 1em;
     display: none;
-
     @media #{$xs_mobile, $sm_mobile, $large_mobile} {
         display: block;
-    }
-
-    //Logo effect
-    #logo-effect {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        max-width: 0;
-        background: rgb(255, 255, 255);
-        opacity: 0.4;
-        filter: alpha(opacity=40);
-        transition: none;
     }
 
     a {
@@ -30,39 +23,26 @@
         font-weight: 900;
         font-size: 45px;
         padding: 0;
-        opacity: 0.95;
-        line-height: 1em;
-        overflow: hidden;
-        transition: 300ms all ease-in;
         color: #333;
+        line-height: 1em;
 
         #spann {
             color: #fff;
             background: $primary_color;
             font-style: italic;
             font-weight: 500;
-            padding: 4px;
-        }
-
+            
         #dot {
             color: $black_color;
+            font-weight: 500;
 
         }
+        }
+
 
 
     }
 }
-
-//Effect happening
-#brand:hover #logo-effect {
-    z-index: 333;
-    max-width: 150%;
-    background: rgb(241, 241, 241);
-    opacity: 0;
-    filter: alpha(opacity=0);
-    transition: all 0.6s ease-out;
-}
-
 
 
 
@@ -102,10 +82,12 @@
             @media #{$xs_mobile, $sm_mobile} {
                 display: block;
                 margin-bottom: 1rem;
+                width: 30vh;
+
             }
 
             @media #{$xs_mobile} {
-                width: 10em;
+                width: 30vh;
             }
         }
 

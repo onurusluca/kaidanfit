@@ -39,16 +39,14 @@ $extra_big_screen: 'only screen and (min-width: 1200px)';
 }
 
 body,
-html,
-main,
-header{
+html{
     width: 100%;
     height: 100%;
     font-family: $primary_font;
     line-height: 1.6rem;
     scroll-behavior: smooth;
-    
 }
+
 
 
 h1,

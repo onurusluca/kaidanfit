@@ -1,6 +1,5 @@
 #header {
   height: 120vh;
-  position: relative;
   background-image: url(/assets/img/landing-page/main-photo.png); // linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
   overflow: hidden;
   background-repeat: no-repeat;
@@ -39,6 +38,7 @@
   //Media queries
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
     height: 3.3rem;
+
   }
 
   //Botton nav
@@ -103,45 +103,41 @@
       }
     }
 
+    #nav-checks {
+      cursor: pointer;
+    }
+
     //Styling for inputs
     #fitness-menu {
-      height: 3rem;
-      opacity: 0;
+      height: 0;
     }
 
     #beslenme-menu {
-      height: 3rem;
-      opacity: 0;
+      height: 0;
 
     }
 
     #saglik-menu {
-      height: 3rem;
-      opacity: 0;
+      height: 0;
 
-    }
-
-    #fit-link {
-      color: blue !important;
     }
 
     //Inputs for menu toggle
 
 
-    #nav-1:checked~label {
+    #nav-1:checked+label {
       color: $primary_color;
 
       ul {
-        opacity: 1;
-
+        height: auto;
       }
     }
 
-    #nav-2:checked~label {
+    #nav-2:checked+label {
       color: $primary_color;
 
       ul {
-        opacity: 1;
+        height: auto;
       }
     }
 
@@ -149,7 +145,7 @@
       color: $primary_color;
 
       ul {
-        opacity: 1;
+        height: auto;
       }
     }
   }
@@ -211,10 +207,10 @@
     //Ham menu
     menu {
       background: #fff;
-      width: 60%;
-      height: 0;
+      width: 0;
+      height: 50%;
       opacity: 1;
-      transition: height 200ms ease;
+      transition: width 200ms ease;
       position: fixed;
       bottom: 0;
       right: 0;
@@ -230,7 +226,7 @@
         height: 3.5rem;
 
         //Social Media Buttons
-        &:nth-child(4){
+        &:nth-child(4) {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
@@ -298,7 +294,7 @@
 
     //Input check for ham menu
     #nav:checked~menu {
-      height: 50%;
+      width: 60%;
     }
 
 
@@ -309,103 +305,102 @@
 /////////////////////////////////////////////
 
 //MAIN NAV BAR
-.nav-bar {
-  display: none;
+#nav-bar {
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  padding: 2rem 2rem;
+  width: 100%;
+  height: 5rem;
+  transition: 0.4s;
+  display: none;
+  z-index: 99;
 
   @media #{$tab_device, 
- $medium_device,
+  $medium_device,
   $big_screen,
   $extra_big_screen
+  }
+    {
+  display: block;
+  }
+
+//Logo
+#brand-logo {
+
+  padding: 0;
+  float: left;
+  font-weight: 900;
+  font-size: 45px;
+  font-family: $logo_font;
+  line-height: 3.3rem;
+  padding: 0;
+  opacity: 0.95;
+  overflow: hidden;
+  transition: 300ms all ease-in;
+  color: #333;
+  z-index: 777;
+
+  //Logo effect
+  #logo-effect {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    max-width: 0;
+    background: rgb(255, 255, 255);
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    transition: none;
+
+  }
+
+  #spann {
+    color: #fff;
+    background: $primary_color;
+    font-style: italic;
+    font-weight: 500;
+    padding: 4px;
+    #dot {
+      color: $black_color;
+      font-weight: 600;
+    }
+  }
+
+
+
 }
 
-  {
-  display: block;
+
+//Effect happening
+#brand-logo:hover #logo-effect {
+  z-index: 333;
+  max-width: 150%;
+  background: rgb(241, 241, 241);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transition: all 0.6s ease-out;
 }
 
 #nav-menu {
-  width: 100%;
-  height: 5rem;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   overflow: hidden;
 
-
-  //Logo
-  #brand {
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    left: 3rem;
-    top: 2rem;
-
-    //Logo effect
-    #logo-effect {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-      max-width: 0;
-      background: rgb(255, 255, 255);
-      opacity: 0.4;
-      filter: alpha(opacity=40);
-      transition: none;
-    }
-
-    a {
-      font-weight: 900;
-      font-size: 45px;
-      font-family: $logo_font;
-      line-height: 3.3rem;
-      padding: 0;
-      opacity: 0.95;
-      overflow: hidden;
-      transition: 300ms all ease-in;
-      color: #333;
-
-      #spann {
-        color: #fff;
-        background: $primary_color;
-        font-style: italic;
-        font-weight: 500;
-        padding: 4px;
-      }
-
-      #dot {
-        color: $black_color;
-
-      }
-
-
-    }
-  }
-
-  //Effect happening
-  #brand:hover #logo-effect {
-    z-index: 333;
-    max-width: 150%;
-    background: rgb(241, 241, 241);
-    opacity: 0;
-    filter: alpha(opacity=0);
-    transition: all 0.6s ease-out;
-  }
-
-
   .nav-row {
-    justify-content: center;
     color: $black_color;
-    padding: 100% 1em;
+    padding: 0 1rem;
 
     .dropdown {
       text-align: center;
-      position: absolute;
-      margin-top: 0;
-      margin-left: -4em;
-      min-width: auto;
+      position: fixed;
+      margin-top: 0.5rem;
+      margin-left: -3em;
       border: none;
       border-radius: 4px;
       background-color: white;
@@ -417,32 +412,35 @@
 
 
       li {
-        padding: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-bottom: 1px solid #dddbdb;
-
+        height: 3em ;
         &:hover {
           background-color: #f8f7f7;
 
         }
 
         .dropdown-links {
+          font-size: 0.9rem;
           color: $text_color;
-          justify-content: center;
           display: inline-flex;
           font-family: $secondary_font;
           text-decoration: none;
-          text-transform: none;
-          font-weight: 500;
-          margin: auto 3em;
+          margin: auto 2em;
+
         }
+
       }
 
       &:hover {
         opacity: 1;
-        visibility: hidden;
-
+        visibility: visible;
       }
+
     }
+
 
     //Nav links
     .nav-link {
@@ -450,6 +448,8 @@
       font-size: 1.1em;
       transition: all 200ms ease;
       color: $black_color;
+      font-family: $primary_font;
+      
 
       &:hover {
         color: rgb(83, 82, 82);
@@ -465,12 +465,22 @@
       &:hover~.dropdown {
         opacity: 1;
         visibility: visible;
-
-
       }
 
+    }
+    &:last-child {
+      margin-right: 3rem;
     }
 
   }
 }
+
+
+}
+
+#nav-bar.large {
+  background-color: blue;
+}
+#nav-bar.small {
+  background-color: red;
 }
