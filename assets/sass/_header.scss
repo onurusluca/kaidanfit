@@ -224,10 +224,10 @@
         height: 3.5rem;
 
         //Social Media Buttons
-        &:last-child {
+        &:nth-child(4){
           display: flex;
           flex-flow: row wrap;
-          justify-content: flex-start;
+          justify-content: center;
 
           a {
             img {
@@ -308,7 +308,7 @@
   overflow: hidden;
 
   @media #{$tab_device, 
-  $medium_device,
+ $medium_device,
   $big_screen,
   $extra_big_screen
 }
@@ -322,19 +322,18 @@
   height: 5rem;
   display: flex;
   flex-direction: row;
-  overflow: hidden;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
 
 
   //Logo
   #brand {
-
+    overflow: hidden;
     padding: 0;
     position: absolute;
     left: 3rem;
-    top: 1rem;
-    overflow: hidden;
+    top: 2rem;
 
     //Logo effect
     #logo-effect {
@@ -355,9 +354,9 @@
       font-weight: 900;
       font-size: 45px;
       font-family: $logo_font;
+      line-height: 3.3rem;
       padding: 0;
       opacity: 0.95;
-      line-height: 1em;
       overflow: hidden;
       transition: 300ms all ease-in;
       color: #333;
@@ -406,8 +405,9 @@
       background-color: white;
       border-bottom: 1px solid rgb(82, 81, 81);
       box-shadow: 0px 2px 4px 0px rgba(176, 176, 176, 1);
-      transition: all 1s linear;
-      display: none;
+      transition: all 200ms ease;
+      opacity: 0;
+      visibility: hidden;
 
 
       li {
@@ -432,7 +432,9 @@
       }
 
       &:hover {
-        display: block;
+        opacity: 1;
+        visibility: hidden;
+
       }
     }
 
@@ -455,17 +457,14 @@
       }
 
       &:hover~.dropdown {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+
 
       }
 
     }
 
-    @media #{$tab_device} {
-      padding: 100% 1em;
-    }
-
   }
 }
 }
-
