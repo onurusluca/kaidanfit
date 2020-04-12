@@ -95,7 +95,6 @@
         justify-content: center;
 
         object {
-            width: 32vh;
             display: block;
             display: none;
             margin-bottom: 1rem;
@@ -106,7 +105,7 @@
             }
 
             @media #{$xs_mobile} {
-                width: 30vh;
+                width: 10em;
             }
         }
 
