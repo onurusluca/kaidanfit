@@ -11,7 +11,6 @@
   background-color: #fff;
   align-items: center;
   box-shadow: 0px -2px 5px 0px rgba(176, 176, 176, 1);
-  overflow: hidden;
   z-index: 880;
 
   //Media queries
@@ -286,7 +285,7 @@
 //MAIN NAV BAR
 .nav-bar {
   background: none;
-  overflow: hidden;
+  overflow: visible;
   position: fixed;
   top: 0;
   padding: 2rem 2rem;
@@ -371,7 +370,6 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
 
   .nav-row {
     color: $black_color;
