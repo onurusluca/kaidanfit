@@ -16,8 +16,8 @@ html {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6rem;
   scroll-behavior: smooth;
-  overflow-x: visible;
   box-sizing: border-box;
+  overflow-x: visible;
 }
 
 h1,
@@ -524,7 +524,7 @@ main {
   margin: 0;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  height: 120vh;
+  height: 60rem;
   background-image: url(/assets/img/landing-page/main-photo.png);
   overflow: hidden;
   background-position: center;
@@ -601,15 +601,14 @@ main {
   justify-content: center;
 }
 
-#jumbotron #mobile-main-image img {
-  width: 10rem;
+#jumbotron #mobile-main-image object {
   display: block;
   display: none;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) {
-  #jumbotron #mobile-main-image img {
+  #jumbotron #mobile-main-image object {
     display: block;
     margin-bottom: 1rem;
     width: 13rem;

@@ -3,7 +3,7 @@ main {
     margin: 0;
     width: 100%;
     font-family: $primary_font;
-    height: 120vh;
+    height: 60rem;
     background-image: url(/assets/img/landing-page/main-photo.png); // linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
     overflow: hidden;
     background-position: center;
@@ -83,8 +83,7 @@ main {
         display: flex;
         justify-content: center;
 
-        img {
-            width: 10rem;
+        object {
             display: block;
             display: none;
             margin-bottom: 1rem;
@@ -128,6 +127,7 @@ main {
 
     h2 {
         font-size: 2rem;
+
         font-weight: 400;
         overflow: visible;
         color: #333;
