@@ -56,7 +56,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar {
-  overflow: auto;
+  overflow: visible;
   position: fixed;
   bottom: 0;
   margin: 0;
@@ -68,12 +68,12 @@ body::-webkit-scrollbar-thumb {
   background-color: #fff;
   align-items: center;
   box-shadow: 0px -2px 5px 0px #b0b0b0;
-  z-index: 880;
+  z-index: 860;
 }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   #bottom-tab-bar {
-    height: 3.3rem;
+    height: 21.3rem;
   }
 }
 
@@ -245,13 +245,13 @@ body::-webkit-scrollbar-thumb {
   height: 3.5rem;
 }
 
-#bottom-tab-bar:last-child menu li:nth-child(5) {
+#bottom-tab-bar:last-child menu li:nth-child(4) {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-#bottom-tab-bar:last-child menu li:nth-child(5) a img {
+#bottom-tab-bar:last-child menu li:nth-child(4) a img {
   height: 1.8em;
   padding-left: 1.2em;
 }
@@ -592,6 +592,10 @@ main {
   #jumbotron {
     margin-top: 6rem;
   }
+}
+
+#jumbotron img {
+  width: 7rem;
 }
 
 #jumbotron #mobile-main-image {
