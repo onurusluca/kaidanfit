@@ -83,7 +83,8 @@ main {
         display: flex;
         justify-content: center;
 
-        object {
+        img {
+            width: 10rem;
             display: block;
             display: none;
             margin-bottom: 1rem;
@@ -126,6 +127,7 @@ main {
     }
 
     h2 {
+        font-size: 2rem;
         font-weight: 400;
         overflow: visible;
         color: #333;

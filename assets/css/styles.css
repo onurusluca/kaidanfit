@@ -601,14 +601,15 @@ main {
   justify-content: center;
 }
 
-#jumbotron #mobile-main-image object {
+#jumbotron #mobile-main-image img {
+  width: 10rem;
   display: block;
   display: none;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) {
-  #jumbotron #mobile-main-image object {
+  #jumbotron #mobile-main-image img {
     display: block;
     margin-bottom: 1rem;
     width: 13rem;
@@ -645,6 +646,7 @@ main {
 }
 
 #jumbotron h2 {
+  font-size: 2rem;
   font-weight: 400;
   overflow: visible;
   color: #333;
