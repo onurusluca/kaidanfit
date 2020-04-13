@@ -71,8 +71,7 @@ main {
 
     @media #{$xs_mobile, $sm_mobile} {
         width: 75%;
-        float: none;
-        margin-top: 5rem;
+        margin-top: 101px;
     }
 
     @media #{$large_mobile} {
@@ -93,7 +92,7 @@ main {
             @media #{$xs_mobile, $sm_mobile} {
                 display: block;
                 margin-bottom: 1rem;
-                width: 30vh;
+                width: 35vh;
 
             }
 
