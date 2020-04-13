@@ -109,7 +109,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar .tab-bar-link .toggle-menu {
-  overflow: auto;
+  overflow: visible;
   background: #fff;
   opacity: 1;
   height: 0;
