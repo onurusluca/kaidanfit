@@ -1,14 +1,11 @@
 main {
-    position: relative;
     margin: 0;
     width: 100%;
     font-family: $primary_font;
     height: 60rem;
-    background-image: url(/assets/img/landing-page/main-photo.png); // linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
-    overflow: hidden;
+    background-image: url(/assets/img/landing-page/main-photo.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode: saturation;
 
 
     @media #{$sm_mobile, $xs_mobile} {

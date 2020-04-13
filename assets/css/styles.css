@@ -245,13 +245,13 @@ body::-webkit-scrollbar-thumb {
   height: 3.5rem;
 }
 
-#bottom-tab-bar:last-child menu li:nth-child(4) {
+#bottom-tab-bar:last-child menu li:nth-child(5) {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-#bottom-tab-bar:last-child menu li:nth-child(4) a img {
+#bottom-tab-bar:last-child menu li:nth-child(5) a img {
   height: 1.8em;
   padding-left: 1.2em;
 }
@@ -521,16 +521,13 @@ body {
 }
 
 main {
-  position: relative;
   margin: 0;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   height: 60rem;
   background-image: url(/assets/img/landing-page/main-photo.png);
-  overflow: hidden;
   background-position: center;
   background-size: cover;
-  background-blend-mode: saturation;
 }
 
 @media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) {
