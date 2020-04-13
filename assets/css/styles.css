@@ -23,12 +23,12 @@ html {
 h1,
 h2,
 h3 {
-  font: 600 2.5rem "Montserrat", sans-serif #333;
+  font: 600 2.5rem "Montserrat", sans-serif;
   line-height: 1.4;
 }
 
 p {
-  font: 400 1.4rem/1.625rem #25cff5 #2f2f30;
+  font: 400 1.4rem/1.625rem #25cff5;
 }
 
 a {
@@ -151,19 +151,19 @@ body::-webkit-scrollbar-thumb {
   height: 0;
 }
 
-#bottom-tab-bar .tab-bar-link #nav-1:checked + label {
+#bottom-tab-bar .tab-bar-link #nav-1:checked ~ label {
   color: #25cff5;
 }
 
-#bottom-tab-bar .tab-bar-link #nav-1:checked + label ul {
+#bottom-tab-bar .tab-bar-link #nav-1:checked ~ label ul {
   height: auto;
 }
 
-#bottom-tab-bar .tab-bar-link #nav-2:checked + label {
+#bottom-tab-bar .tab-bar-link #nav-2:checked ~ label {
   color: #25cff5;
 }
 
-#bottom-tab-bar .tab-bar-link #nav-2:checked + label ul {
+#bottom-tab-bar .tab-bar-link #nav-2:checked ~ label ul {
   height: auto;
 }
 
@@ -385,6 +385,7 @@ body::-webkit-scrollbar-thumb {
   background-color: white;
   transition: all 200ms ease;
   height: 0;
+  width: auto;
 }
 
 .nav-bar #nav-menu .nav-row .dropdown li {
@@ -463,7 +464,7 @@ body {
 
 #button-up {
   display: inline-block;
-  background-color: #FF9800;
+  background-color: #ff9800;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -472,7 +473,7 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s,  opacity .5s, visibility .5s;
+  transition: background-color 0.2s, opacity 0.3s, visibility 0.3s;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
@@ -521,7 +522,6 @@ body {
 main {
   position: relative;
   margin: 0;
-  justify-content: bottom;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   height: 120vh;
@@ -592,7 +592,7 @@ main {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   #jumbotron {
-    margin-top: 12rem;
+    margin-top: 6rem;
   }
 }
 
@@ -611,13 +611,7 @@ main {
   #jumbotron #mobile-main-image object {
     display: block;
     margin-bottom: 1rem;
-    width: 35vh;
-  }
-}
-
-@media (max-width: 420px) {
-  #jumbotron #mobile-main-image object {
-    width: 30vh;
+    width: 13rem;
   }
 }
 

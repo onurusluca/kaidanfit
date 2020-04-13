@@ -11,7 +11,7 @@ $(window).on("scroll touchmove", function () {
 /* Button for returning to top*/
 var btn = $('#button-up');
 $(window).scroll(function() {
-  if ($(window).scrollTop() > 500) {
+  if ($(window).scrollTop() > 1000) {
     btn.addClass('show');
   } else {
     btn.removeClass('show');

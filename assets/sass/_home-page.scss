@@ -1,7 +1,6 @@
 main {
     position: relative;
     margin: 0;
-    justify-content: bottom;
     width: 100%;
     font-family: $primary_font;
     height: 120vh;
@@ -76,7 +75,7 @@ main {
 
     @media #{$large_mobile} {
 
-        margin-top: 12rem;
+        margin-top: 6rem;
     }
 
     //Main image for mobile
@@ -92,13 +91,11 @@ main {
             @media #{$xs_mobile, $sm_mobile} {
                 display: block;
                 margin-bottom: 1rem;
-                width: 35vh;
+                width: 13rem;
 
             }
 
-            @media #{$xs_mobile} {
-                width: 30vh;
-            }
+           
         }
 
 
