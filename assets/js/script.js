@@ -1,25 +1,24 @@
+/* Let only one tab bar menu open */
 $('input.nav-checks').on('change', function() {
     $('input.nav-checks').not(this).prop('checked', false);  
 });
 
+/* Shrink navbar and change color on scroll down */
+$(window).on("scroll touchmove", function () {
+    $('#nav-bar-toggle').toggleClass('scrolled', $(document).scrollTop() > 0);
+});
 
-/* 
-$(document).on("scroll", function() {
-
-	if($(document).scrollTop()>100) {
-		$("#nav-bar").removeClass("large").addClass("small");
-	} else {
-		$("#nav-bar").removeClass("small").addClass("large");
-	}
-	
-}); */
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("nav-bar").style.backgroundColor = "red";
+/* Button for returning to top*/
+var btn = $('#button-up');
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 500) {
+    btn.addClass('show');
   } else {
-    document.getElementById("nav-bar").style.backgroundColor = "gray";
-  };
-};
+    btn.removeClass('show');
+  }
+});
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+

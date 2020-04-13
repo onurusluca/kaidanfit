@@ -1,19 +1,35 @@
 main {
-    margin: 1rem;
-    justify-content: center;
+    position: relative;
+    margin: 0;
+    justify-content: bottom;
+    width: 100%;
+    font-family: $primary_font;
+    height: 120vh;
+    background-image: url(/assets/img/landing-page/main-photo.png); // linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: saturation;
+
+
+    @media #{$sm_mobile, $xs_mobile} {
+        background-image: none;
+        background-color: #9AB0BB;
+    }
+
+
 }
-
-
 
 
 //Logo for mobile
 #mobile-brand {
-    
+
     overflow: hidden;
     padding: 0;
     margin-top: 1em;
     margin-left: 1em;
     display: none;
+
     @media #{$xs_mobile, $sm_mobile, $large_mobile} {
         display: block;
     }
@@ -24,37 +40,32 @@ main {
         font-size: 45px;
         padding: 0;
         color: #333;
-        line-height: 1em;
+        line-height: 1.2em;
 
         #spann {
             color: #fff;
             background: $primary_color;
             font-style: italic;
             font-weight: 500;
-            
-        #dot {
-            color: $black_color;
-            font-weight: 500;
 
+            #dot {
+                color: $black_color;
+                font-weight: 600;
+
+            }
         }
-        }
-
-
 
     }
 }
 
 
 
-
-
 //JUMBOTRON
 #jumbotron {
-    margin-top: 12rem;
+    margin-top: 18rem;
     margin-left: 3rem;
     text-align: center;
     align-items: center;
-
     float: left;
     width: 60%;
 
@@ -154,7 +165,7 @@ main {
     } */
 
     .myButton {
-        background-color: #2ECC71;
+        background-color: rgb(6, 192, 84);
         border-radius: 4px;
         display: inline-block;
         cursor: pointer;
@@ -174,7 +185,7 @@ main {
     }
 
     .myButton:hover {
-        background-color: rgb(5, 190, 82);
+        background-color: rgb(5, 170, 74);
     }
 
     .myButton:active {
@@ -182,4 +193,9 @@ main {
         top: 1px;
     }
 
+}
+
+
+#home-content {
+    margin: 2em;
 }

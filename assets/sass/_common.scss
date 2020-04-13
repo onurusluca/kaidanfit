@@ -8,7 +8,7 @@ $secondary_font: 'Raleway',sans-serif; //For navigation
 $logo_font: 'Heebo', sans-serif; //For Titles
 //Colors
 $primary_color: #25cff5;
-$secondary_color: #db02a1;
+$secondary_color: #818181;
 
 
 $white_color: rgba(255, 255, 255, 0.733);
@@ -45,6 +45,7 @@ html{
     font-family: $primary_font;
     line-height: 1.6rem;
     scroll-behavior: smooth;
+    overflow-x: visible;
 }
 
 
