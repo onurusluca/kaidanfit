@@ -71,7 +71,7 @@ main {
 
     @media #{$xs_mobile, $sm_mobile} {
         width: 75%;
-        margin-top: 101px;
+        margin-top: 4rem;
     }
 
     @media #{$large_mobile} {
@@ -146,23 +146,6 @@ main {
             font-size: 1.3rem;
         }
     }
-
-    /*    p {
-        font-size: 20px;
-
-        @media #{$large_mobile} {
-            font-size: 1.3rem;
-        }
-
-        @media #{$sm_mobile} {
-            font-size: 1.2rem;
-        }
-
-        @media #{$xs_mobile} {
-            font-size: 1.1rem;
-        }
-    } */
-
     .myButton {
         background-color: rgb(6, 192, 84);
         border-radius: 4px;

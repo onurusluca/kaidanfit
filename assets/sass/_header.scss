@@ -273,7 +273,7 @@
 
     //Input check for ham menu
     #nav:checked~menu {
-      width: 400px;
+      width: 13rem;
     }
 
 
@@ -285,7 +285,6 @@
 
 //MAIN NAV BAR
 .nav-bar {
-  min-height: 100px;
   background: none;
   overflow: hidden;
   position: fixed;
@@ -381,15 +380,12 @@
     .dropdown {
       text-align: center;
       position: fixed;
-      margin-top: 0.5rem;
+      margin-top: -0.1rem;
       margin-left: -3em;
-      border: none;
       border-radius: 4px;
       background-color: white;
-      border-bottom: 1px solid rgb(212, 210, 210);
       transition: all 200ms ease;
-      opacity: 0;
-      visibility: hidden;
+      height: 0;
 
 
       li {
@@ -417,8 +413,7 @@
       }
 
       &:hover {
-        opacity: 1;
-        visibility: visible;
+       height: auto;
       }
 
     }
@@ -449,8 +444,8 @@
       }
 
       &:hover~.dropdown {
-        opacity: 1;
-        visibility: visible;
+        height: auto;
+
       }
 
     }
