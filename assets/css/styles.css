@@ -56,6 +56,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar {
+  overflow: auto;
   position: fixed;
   bottom: 0;
   margin: 0;
@@ -108,6 +109,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar .tab-bar-link .toggle-menu {
+  overflow: auto;
   background: #fff;
   opacity: 1;
   height: 0;
@@ -296,10 +298,10 @@ body::-webkit-scrollbar-thumb {
 
 .nav-bar {
   background: none;
-  overflow: visible;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  padding: 2rem 2rem;
+  padding: 1rem 0;
   width: 100%;
   height: 4rem;
   transition: 0.4s;
@@ -314,13 +316,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-bar #brand-logo {
-  margin-top: -15px;
-  padding: 0;
   float: left;
+  margin-left: 1rem;
   font-weight: 900;
   font-size: 45px;
   font-family: "Heebo", sans-serif;
-  padding: 0;
   line-height: 50px;
   overflow: hidden;
   color: #333;
@@ -368,23 +368,22 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
 }
 
 .nav-bar #nav-menu .nav-row {
   color: #333;
-  padding: 0 1rem;
 }
 
 .nav-bar #nav-menu .nav-row .dropdown {
   text-align: center;
   position: fixed;
-  margin-top: -0.1rem;
-  margin-left: -3em;
+  top: 4rem;
+  margin-left: -2em;
   border-radius: 4px;
   background-color: white;
   transition: all 200ms ease;
   height: 0;
+  opacity: 0;
   width: auto;
 }
 
@@ -411,6 +410,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav-bar #nav-menu .nav-row .dropdown:hover {
   height: auto;
+  opacity: 1;
 }
 
 .nav-bar #nav-menu .nav-row .nav-link {
@@ -422,6 +422,7 @@ body::-webkit-scrollbar-thumb {
   transition: all 200ms ease;
   color: #333;
   font-family: "Montserrat", sans-serif;
+  padding: 1em;
 }
 
 .nav-bar #nav-menu .nav-row .nav-link:hover {
@@ -436,16 +437,16 @@ body::-webkit-scrollbar-thumb {
 
 .nav-bar #nav-menu .nav-row .nav-link:hover ~ .dropdown {
   height: auto;
+  opacity: 1;
 }
 
 .nav-bar.scrolled {
   min-height: 30px;
   background: white;
-  transition: 0.45s all ease-in;
+  transition: 0.35s all ease-in;
 }
 
 .nav-bar.scrolled #brand-logo {
-  margin-top: -20px;
   font-size: 35px;
   line-height: 40px;
   transition: 0.25s all ease;
@@ -609,7 +610,7 @@ main {
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) {
   #jumbotron #mobile-main-image object {
-    display: block;
+    display: inline-block;
     margin-bottom: 1rem;
     width: 13rem;
   }

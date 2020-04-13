@@ -1,5 +1,6 @@
 //TAB BAR AT THE BOTTOM
 #bottom-tab-bar {
+  overflow: auto;
   position: fixed;
   bottom: 0;
   margin: 0;
@@ -52,6 +53,7 @@
 
     //Menu toggle menus
     .toggle-menu {
+      overflow: auto;
       background: #fff;
       opacity: 1;
       height: 0;
@@ -261,10 +263,10 @@
 //MAIN NAV BAR
 .nav-bar {
   background: none;
-  overflow: visible;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  padding: 2rem 2rem;
+  padding: 1rem 0;
   width: 100%;
   height: 4rem;
   transition: 0.4s;
@@ -281,13 +283,11 @@
 
   //Logo
   #brand-logo {
-    margin-top: -15px;
-    padding: 0;
     float: left;
+    margin-left: 1rem;
     font-weight: 900;
     font-size: 45px;
     font-family: $logo_font;
-    padding: 0;
     line-height: 50px;
     overflow: hidden;
     color: #333;
@@ -337,21 +337,19 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-
     .nav-row {
       color: $black_color;
-      padding: 0 1rem;
 
       .dropdown {
         text-align: center;
         position: fixed;
-        margin-top: -0.1rem;
-        margin-left: -3em;
+        top: 4rem;
+        margin-left: -2em;
         border-radius: 4px;
         background-color: white;
         transition: all 200ms ease;
         height: 0;
+        opacity: 0;
         width: auto;
 
         li {
@@ -377,6 +375,8 @@
 
         &:hover {
           height: auto;
+          opacity: 1;
+
         }
       }
 
@@ -390,6 +390,7 @@
         transition: all 200ms ease;
         color: $black_color;
         font-family: $primary_font;
+        padding: 1em;
 
         &:hover {
           color: rgb(83, 82, 82);
@@ -404,19 +405,21 @@
 
         &:hover ~ .dropdown {
           height: auto;
+          opacity: 1;
         }
       }
     }
   }
 }
 
+
+//Shrink on scroll down
 .nav-bar.scrolled {
   min-height: 30px;
   background: rgb(255, 255, 255);
-  transition: 0.45s all ease-in;
+  transition: 0.35s all ease-in;
 
   #brand-logo {
-    margin-top: -20px;
     font-size: 35px;
     line-height: 40px;
     transition: 0.25s all ease;

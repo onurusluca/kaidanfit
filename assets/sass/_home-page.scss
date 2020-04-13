@@ -89,7 +89,7 @@ main {
             margin-bottom: 1rem;
 
             @media #{$xs_mobile, $sm_mobile} {
-                display: block;
+                display: inline-block;
                 margin-bottom: 1rem;
                 width: 13rem;
 
