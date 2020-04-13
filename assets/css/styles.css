@@ -17,6 +17,7 @@ html {
   line-height: 1.6rem;
   scroll-behavior: smooth;
   overflow-x: visible;
+  box-sizing: border-box;
 }
 
 h1,
@@ -33,6 +34,12 @@ p {
 a {
   color: #333;
   text-decoration: none;
+}
+
+button {
+  appearance: none;
+  background: transparent;
+  /* Other styles */
 }
 
 body::-webkit-scrollbar {

@@ -46,6 +46,8 @@ html{
     line-height: 1.6rem;
     scroll-behavior: smooth;
     overflow-x: visible;
+    box-sizing: border-box;
+
 }
 
 
@@ -65,6 +67,31 @@ a {
     color: $black_color;
     text-decoration: none;
 }
+
+
+button {
+    appearance: none;
+    background: transparent;
+    /* Other styles */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Scrollbar
 
