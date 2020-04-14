@@ -7,10 +7,9 @@
   width: 100%;
   height: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-around;
   background-color: #fff;
-  align-items: center;
   box-shadow: 0px -2px 5px 0px rgba(176, 176, 176, 1);
   z-index: 860;
 
@@ -98,24 +97,28 @@
 
     //Inputs for menu toggle
 
-    #nav-1:checked ~ label {
+    #nav-1:checked~label {
       color: $primary_color;
+      overflow: auto;
 
       ul {
         height: 111px;
+        
       }
     }
 
-    #nav-2:checked ~ label {
+    #nav-2:checked~label {
       color: $primary_color;
+      overflow: auto;
 
       ul {
         height: auto;
       }
     }
 
-    #nav-3:checked ~ label {
+    #nav-3:checked~label {
       color: $primary_color;
+      overflow: auto;
 
       ul {
         height: auto;
@@ -126,7 +129,7 @@
   //HAMBURGER MENU CONTANIER
   &:last-child {
     z-index: 890;
-
+    overflow: auto;
     //The input
     input {
       display: none;
@@ -173,19 +176,14 @@
     }
 
     //Ham menu
-    menu {
+    #ham-menu {
       background: #fff;
       width: 0;
-      height: 50%;
-      opacity: 1;
-      transition: width 200ms ease;
-      position: fixed;
-      bottom: 0;
-      right: 0;
       display: flex;
       flex-flow: column wrap;
       justify-content: flex-end;
-
+      opacity: 0;
+    
       li {
         border-top: #a9a9a9a9 1px solid;
         margin: 0;
@@ -226,7 +224,8 @@
       }
     }
 
-    #nav:checked ~ label {
+    #nav:checked~label {
+
       //Hamburger icon animation
       b {
         transition-delay: 100ms;
@@ -250,8 +249,14 @@
     }
 
     //Input check for ham menu
-    #nav:checked ~ menu {
+    #nav:checked~#ham-menu {
       width: 13rem;
+      height: 50%;
+      transition: width 200ms ease;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
     }
   }
 }
@@ -275,139 +280,142 @@
  $medium_device,
   $big_screen,
   $extra_big_screen
-} {
-    display: block;
+}
+
+  {
+  display: block;
+}
+
+//Logo
+#brand-logo {
+  float: left;
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 45px;
+  font-family: $logo_font;
+  line-height: 50px;
+  overflow: hidden;
+  color: #333;
+  z-index: 777;
+  transition: height 300ms, background 300ms;
+
+  //Logo effect
+  #logo-effect {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    width: 100%;
+    height: 60%;
+    max-width: 0;
+    background: rgb(255, 255, 255);
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    transition: none;
   }
 
-  //Logo
-  #brand-logo {
-    float: left;
-    margin-left: 1rem;
-    font-weight: 900;
-    font-size: 45px;
-    font-family: $logo_font;
-    line-height: 50px;
-    overflow: hidden;
-    color: #333;
-    z-index: 777;
-    transition: height 300ms, background 300ms;
+  #spann {
+    color: #fff;
+    background: $primary_color;
+    font-style: italic;
+    font-weight: 500;
+    padding: 4px 0;
 
-    //Logo effect
-    #logo-effect {
-      content: "";
-      position: absolute;
-      top: 0.5rem;
-      left: 1rem;
-      width: 100%;
-      height: 60%;
-      max-width: 0;
-      background: rgb(255, 255, 255);
-      opacity: 0.4;
-      filter: alpha(opacity=40);
-      transition: none;
-    }
-
-    #spann {
-      color: #fff;
-      background: $primary_color;
-      font-style: italic;
-      font-weight: 500;
-      padding: 4px 0;
-
-      #dot {
-        color: $black_color;
-        font-weight: 600;
-      }
-    }
-  }
-
-  //Effect happening
-  #brand-logo:hover #logo-effect {
-    z-index: 333;
-    max-width: 16rem;
-    background: rgb(241, 241, 241);
-    opacity: 0;
-    filter: alpha(opacity=0);
-    transition: all 0.6s ease-out;
-  }
-
-  #nav-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    .nav-row {
+    #dot {
       color: $black_color;
+      font-weight: 600;
+    }
+  }
+}
 
-      .dropdown {
-        text-align: center;
-        position: fixed;
-        top: 4rem;
-        margin-left: -2em;
-        border-radius: 4px;
-        background-color: white;
-        transition: all 200ms ease;
-        height: 0;
-        opacity: 0;
-        width: auto;
+//Effect happening
+#brand-logo:hover #logo-effect {
+  z-index: 333;
+  max-width: 16rem;
+  background: rgb(241, 241, 241);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transition: all 0.6s ease-out;
+}
 
-        li {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-bottom: 1px solid #dddbdb;
-          height: 3em;
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 
-          &:hover {
-            background-color: #f8f7f7;
-          }
+  .nav-row {
+    color: $black_color;
 
-          .dropdown-links {
-            font-size: 0.9rem;
-            color: $text_color;
-            display: inline-flex;
-            font-family: $secondary_font;
-            text-decoration: none;
-            margin: auto 2em;
-          }
-        }
+    .dropdown {
+      text-align: center;
+      position: fixed;
+      top: 4rem;
+      margin-left: -2em;
+      border-radius: 4px;
+      background-color: white;
+      transition: all 200ms ease;
+      height: 0;
+      opacity: 0;
+      width: auto;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #dddbdb;
+        height: 3em;
 
         &:hover {
-          height: auto;
-          opacity: 1;
+          background-color: #f8f7f7;
+        }
 
+        .dropdown-links {
+          font-size: 0.9rem;
+          color: $text_color;
+          display: inline-flex;
+          font-family: $secondary_font;
+          text-decoration: none;
+          margin: auto 2em;
         }
       }
 
-      //Nav links
-      .nav-link {
-        display: inline-flex;
-        align-items: center;
-        flex-flow: nowrap;
-        font-weight: 400;
-        font-size: 1.1em;
-        transition: all 200ms ease;
-        color: $black_color;
-        font-family: $primary_font;
-        padding: 1em;
+      &:hover {
+        height: auto;
+        opacity: 1;
 
-        &:hover {
-          color: rgb(83, 82, 82);
-        }
+      }
+    }
 
-        //Chevron
-        i {
-          font-size: 1em;
-          margin-bottom: -3px;
-          margin-left: 4px;
-        }
+    //Nav links
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      flex-flow: nowrap;
+      font-weight: 400;
+      font-size: 1.1em;
+      transition: all 200ms ease;
+      color: $black_color;
+      font-family: $primary_font;
+      padding: 1em;
 
-        &:hover ~ .dropdown {
-          height: auto;
-          opacity: 1;
-        }
+      &:hover {
+        color: rgb(83, 82, 82);
+      }
+
+      //Chevron
+      i {
+        font-size: 1em;
+        margin-bottom: -3px;
+        margin-left: 4px;
+      }
+
+      &:hover~.dropdown {
+        height: auto;
+        opacity: 1;
       }
     }
   }
+}
 }
 
 
@@ -452,12 +460,14 @@ body {
   visibility: hidden;
   overflow: hidden;
   z-index: 600;
+
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
     bottom: 60px;
     width: 30px;
     height: 30px;
   }
 }
+
 #button-up::after {
   content: "\f077";
   font-family: FontAwesome;
@@ -466,18 +476,22 @@ body {
   font-size: 2em;
   line-height: 40px;
   color: #fff;
+
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
     line-height: 30px;
     font-size: 1.5em;
   }
 }
+
 #button-up:hover {
   cursor: pointer;
   background-color: #333;
 }
+
 #button-up:active {
   background-color: #555;
 }
+
 #button-up.show {
   opacity: 1;
   visibility: visible;
