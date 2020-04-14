@@ -16,13 +16,12 @@
 
   //Media queries
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
-    height: 21.3rem;
+    height: 3.3rem;
   }
 
   //Botton nav
   .tab-bar-link {
     z-index: 870;
-    overflow: visible;
 
     #nav-1,
     #nav-2,
@@ -46,8 +45,6 @@
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
-      overflow: visible;
-
     }
 
     i {
@@ -56,16 +53,13 @@
 
     //Menu toggle menus
     .toggle-menu {
-      overflow: visible;
       background: #fff;
       opacity: 1;
       height: 0;
       transition: height 100ms ease;
-      position: fixed;
-      bottom: 3.3rem;
-      left: 0;
-      right: 0;
-      z-index: 870;
+      position: fixed !important;
+     margin-bottom: 3rem;
+      z-index: 899;
       display: flex;
       flex-flow: column wrap;
       align-items: center;

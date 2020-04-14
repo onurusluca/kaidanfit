@@ -73,13 +73,12 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   #bottom-tab-bar {
-    height: 21.3rem;
+    height: 3.3rem;
   }
 }
 
 #bottom-tab-bar .tab-bar-link {
   z-index: 870;
-  overflow: visible;
   text-decoration: none;
   text-transform: capitalize;
   color: #333;
@@ -103,7 +102,6 @@ body::-webkit-scrollbar-thumb {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  overflow: visible;
 }
 
 #bottom-tab-bar .tab-bar-link i {
@@ -111,16 +109,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar .tab-bar-link .toggle-menu {
-  overflow: visible;
   background: #fff;
   opacity: 1;
   height: 0;
   transition: height 100ms ease;
-  position: fixed;
-  bottom: 3.3rem;
-  left: 0;
-  right: 0;
-  z-index: 870;
+  position: fixed !important;
+  margin-bottom: 3rem;
+  z-index: 899;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
