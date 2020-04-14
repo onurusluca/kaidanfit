@@ -3,16 +3,17 @@
   position: fixed;
   bottom: 0;
   margin: 0;
-  display: flex;
-  flex-direction: row nowrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 1.5fr;
   height: 0;
+  opacity: 1;
+  transition: 300ms all;
+  width: 100%;
 
   //Media queries
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
     height: 3.3rem;
     overflow: visible;
-    width: 100%;
     background-color: #fff;
     box-shadow: 0px -2px 5px 0px rgba(176, 176, 176, 1);
     z-index: 860;
@@ -22,6 +23,9 @@
     display: flex;
     flex-flow: column wrap;
     text-align: center;
+    color: #3f3e3e;
+    border-right: 1px solid rgb(199, 198, 198);
+
   }
 
   //Botton nav
@@ -36,6 +40,8 @@
     align-items: center;
     padding: 4px;
     margin-top: 4px;
+    width: 100%;
+
     font: 600 13px $secondary_font;
 
     #nav-1,
@@ -66,11 +72,12 @@
         text-align: center;
         width: 100%;
         color: $black_color;
-        padding: 1em;
+        padding: 1.2em;
         border-bottom: 1px solid rgb(212, 210, 210);
 
         .dropup-links {
           color: $black_color;
+          font-size: 16px;
         }
       }
     }
@@ -133,10 +140,14 @@
   }
 
   //HAMBURGER MENU CONTANIER
-  &:last-child {
+  #hamburger-container {
     overflow: visible;
     z-index: 990;
-
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
     //The input
     input {
       display: none;
@@ -148,6 +159,7 @@
       position: relative;
       z-index: 900;
       cursor: pointer;
+      border-right: none;
 
       b {
         width: 40px;
@@ -268,6 +280,13 @@
   }
 }
 
+//Hide bottom bar on scrolldown
+#bottom-tab-bar.hide-tab-bar {
+  width: 0;
+  opacity: 0;
+}
+
+
 /////////////////////////////////////////////
 
 //MAIN NAV BAR
@@ -352,6 +371,7 @@
 
   .nav-row {
     color: $black_color;
+
     //Navbar link dropdowns
     .dropdown {
       text-align: center;

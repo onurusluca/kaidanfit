@@ -83,21 +83,19 @@ main {
     #mobile-main-image {
         display: flex;
         justify-content: center;
+        display: block;
+        display: none;
+        margin-bottom: 1rem;
 
-         
-            display: block;
-            display: none;
+        @media #{$xs_mobile, $sm_mobile} {
+            display: inline-block;
             margin-bottom: 1rem;
+            width: 13rem;
 
-            @media #{$xs_mobile, $sm_mobile} {
-                display: inline-block;
-                margin-bottom: 1rem;
-                width: 13rem;
+        }
 
-            }
 
-           
-        
+
 
 
     }
@@ -146,6 +144,7 @@ main {
             font-size: 1.3rem;
         }
     }
+
     .myButton {
         background-color: rgb(6, 192, 84);
         border-radius: 4px;
