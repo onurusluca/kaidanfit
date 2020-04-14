@@ -77,6 +77,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+#bottom-tab-bar label {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+
 #bottom-tab-bar .tab-bar-link {
   overflow: visible;
   z-index: 870;
@@ -153,12 +159,20 @@ body::-webkit-scrollbar-thumb {
   height: 111px;
 }
 
+#bottom-tab-bar .tab-bar-link #nav-1:checked ~ #fitness-menu {
+  height: auto;
+}
+
 #bottom-tab-bar .tab-bar-link #nav-2:checked ~ label {
   color: #25cff5;
   overflow: auto;
 }
 
 #bottom-tab-bar .tab-bar-link #nav-2:checked ~ label ul {
+  height: auto;
+}
+
+#bottom-tab-bar .tab-bar-link #nav-2:checked ~ #beslenme-menu {
   height: auto;
 }
 
@@ -172,8 +186,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar:last-child {
-  z-index: 890;
   overflow: visible;
+  z-index: 990;
 }
 
 #bottom-tab-bar:last-child input {
@@ -283,12 +297,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar:last-child #nav:checked ~ #ham-menu {
-  width: 13rem;
-  height: 50%;
-  transition: width 200ms ease;
   position: fixed;
   bottom: 0;
   right: 0;
+  width: 13rem;
+  height: 20rem;
+  transition: width 200ms ease;
   opacity: 1;
 }
 

@@ -17,7 +17,13 @@
     background-color: #fff;
     box-shadow: 0px -2px 5px 0px rgba(176, 176, 176, 1);
     z-index: 860;
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  label {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
   }
 
   //Botton nav
@@ -34,7 +40,7 @@
     padding: 4px;
     margin-top: 4px;
     font: 600 13px $secondary_font;
-  
+
     #nav-1,
     #nav-2,
     #nav-3 {
@@ -97,8 +103,12 @@
 
       ul {
         height: 111px;
-        
+
       }
+    }
+
+    #nav-1:checked~#fitness-menu {
+      height: auto;
     }
 
     #nav-2:checked~label {
@@ -108,12 +118,18 @@
       ul {
         height: auto;
       }
+
+    }
+
+    #nav-2:checked~#beslenme-menu {
+      height: auto;
     }
 
     #nav-3:checked~label {
       color: $primary_color;
       overflow: auto;
     }
+
     #nav-3:checked~#saglik-menu {
       height: auto;
     }
@@ -121,8 +137,9 @@
 
   //HAMBURGER MENU CONTANIER
   &:last-child {
-    z-index: 890;
     overflow: visible;
+    z-index: 990;
+
     //The input
     input {
       display: none;
@@ -176,7 +193,7 @@
       flex-flow: column wrap;
       justify-content: flex-end;
       opacity: 0;
-    
+
       li {
         border-top: #a9a9a9a9 1px solid;
         margin: 0;
@@ -243,12 +260,12 @@
 
     //Input check for ham menu
     #nav:checked~#ham-menu {
-      width: 13rem;
-      height: 50%;
-      transition: width 200ms ease;
       position: fixed;
       bottom: 0;
       right: 0;
+      width: 13rem;
+      height: 20rem;
+      transition: width 200ms ease;
       opacity: 1;
     }
   }
