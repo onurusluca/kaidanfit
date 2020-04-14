@@ -1,7 +1,7 @@
 //TAB BAR AT THE BOTTOM
 #bottom-tab-bar {
   overflow: visible;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   margin: 0;
   width: 100%;
@@ -45,14 +45,14 @@
 
     //Menu toggle menus
     .toggle-menu {
-      background: #fff;
-      opacity: 1;
-      transition: height 100ms ease;
-      position: fixed !important;
+      position: fixed;
       bottom: 3.3rem;
       left: 0;
       right: 0;
       z-index: 899;
+      background: #fff;
+      opacity: 1;
+      transition: height 100ms ease;
       display: flex;
       flex-flow: column wrap;
       align-items: center;
