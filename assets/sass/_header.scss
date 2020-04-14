@@ -352,7 +352,7 @@
 
   .nav-row {
     color: $black_color;
-
+    //Navbar link dropdowns
     .dropdown {
       text-align: center;
       position: fixed;
@@ -387,7 +387,7 @@
       }
 
       &:hover {
-        height: auto;
+        height: 10rem;
 
       }
     }
@@ -416,7 +416,7 @@
       }
 
       &:hover~.dropdown {
-        height: auto;
+        height: 10rem;
       }
     }
   }
