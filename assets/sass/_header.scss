@@ -1,17 +1,17 @@
 //TAB BAR AT THE BOTTOM
 #bottom-tab-bar {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   justify-content: space-evenly;
   height: 0;
-
   //Media queries
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
     height: 3.3rem;
     overflow: visible;
-    position: fixed;
-    bottom: 0;
-    margin: 0;
+  
     width: 100%;
   
     background-color: #fff;
