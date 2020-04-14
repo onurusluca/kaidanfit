@@ -15,13 +15,12 @@
 
   //Media queries
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
-    height: 3.3rem;
+    height: 13.3rem;
   }
 
   //Botton nav
   .tab-bar-link {
     z-index: 870;
-
     #nav-1,
     #nav-2,
     #nav-3 {
@@ -39,12 +38,6 @@
     margin-top: 4px;
     font: 600 13px $secondary_font;
 
-    label {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
-    }
 
     i {
       font-size: 1.8em;
@@ -119,10 +112,9 @@
     #nav-3:checked~label {
       color: $primary_color;
       overflow: auto;
-
-      ul {
-        height: auto;
-      }
+    }
+    #nav-3:checked~#saglik-menu {
+      height: auto;
     }
   }
 

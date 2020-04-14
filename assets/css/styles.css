@@ -72,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) {
   #bottom-tab-bar {
-    height: 3.3rem;
+    height: 13.3rem;
   }
 }
 
@@ -94,13 +94,6 @@ body::-webkit-scrollbar-thumb {
 #bottom-tab-bar .tab-bar-link #nav-2,
 #bottom-tab-bar .tab-bar-link #nav-3 {
   display: none;
-}
-
-#bottom-tab-bar .tab-bar-link label {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 #bottom-tab-bar .tab-bar-link i {
@@ -173,7 +166,7 @@ body::-webkit-scrollbar-thumb {
   overflow: auto;
 }
 
-#bottom-tab-bar .tab-bar-link #nav-3:checked ~ label ul {
+#bottom-tab-bar .tab-bar-link #nav-3:checked ~ #saglik-menu {
   height: auto;
 }
 
