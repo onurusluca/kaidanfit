@@ -111,10 +111,11 @@ body::-webkit-scrollbar-thumb {
 #bottom-tab-bar .tab-bar-link .toggle-menu {
   background: #fff;
   opacity: 1;
-  height: 0;
   transition: height 100ms ease;
   position: fixed !important;
-  margin-bottom: 3rem;
+  bottom: 3.3rem;
+  left: 0;
+  right: 0;
   z-index: 899;
   display: flex;
   flex-flow: column wrap;
@@ -155,7 +156,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bottom-tab-bar .tab-bar-link #nav-1:checked ~ label ul {
-  height: auto;
+  height: 111px;
 }
 
 #bottom-tab-bar .tab-bar-link #nav-2:checked ~ label {
