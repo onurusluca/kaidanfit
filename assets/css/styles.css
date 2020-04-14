@@ -132,7 +132,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row .nav-link i { font-size: 1em; margin-bottom: -3px; margin-left: 4px; }
 
-.nav-bar #nav-menu .nav-row .nav-link:hover ~ .dropdown { height: auto; opacity: 1; }
+.nav-bar #nav-menu .nav-row .nav-link:hover ~ .dropdown { height: 4rem; opacity: 1; }
 
 .nav-bar.scrolled { min-height: 30px; background: white; transition: 0.35s all ease-in; }
 
