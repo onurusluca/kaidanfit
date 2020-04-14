@@ -79,6 +79,7 @@ body::-webkit-scrollbar-thumb {
 
 #bottom-tab-bar .tab-bar-link {
   z-index: 870;
+  overflow: visible;
   text-decoration: none;
   text-transform: capitalize;
   color: #333;
@@ -102,6 +103,7 @@ body::-webkit-scrollbar-thumb {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  overflow: visible;
 }
 
 #bottom-tab-bar .tab-bar-link i {
