@@ -362,7 +362,6 @@
       background-color: white;
       transition: all 200ms ease;
       height: 0;
-      opacity: 0;
       width: auto;
 
       li {
@@ -389,7 +388,6 @@
 
       &:hover {
         height: auto;
-        opacity: 1;
 
       }
     }
@@ -419,7 +417,6 @@
 
       &:hover~.dropdown {
         height: auto;
-        opacity: 1;
       }
     }
   }
