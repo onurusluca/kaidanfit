@@ -24,7 +24,7 @@
     flex-flow: column wrap;
     text-align: center;
     color: #3f3e3e;
-    border-right: 1px solid rgb(199, 198, 198);
+    border-right: 1px solid rgb(224, 219, 219);
 
   }
 
@@ -77,7 +77,8 @@
 
         .dropup-links {
           color: $black_color;
-          font-size: 16px;
+          font-size: 14px;
+          font-family: $secondary_font;
         }
       }
     }
@@ -147,7 +148,7 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    
+
     //The input
     input {
       display: none;
@@ -200,35 +201,37 @@
       width: 0;
       display: flex;
       flex-flow: column wrap;
-      justify-content: flex-end;
+      align-items: center;
       opacity: 0;
 
       li {
-        border-top: #a9a9a9a9 1px solid;
+        border-top: #d3cfcfa9 1px solid;
         margin: 0;
         list-style: none;
         width: 100%;
-        height: 3.5rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         //Social Media Buttons
-        &:nth-child(4) {
+        &:nth-child(1) {
           display: flex;
           flex-flow: row wrap;
-          justify-content: center;
+          justify-content: space-evenly;
+          overflow: hidden;
+          align-items: center;
 
           a {
-            img {
-              height: 1.8em;
-              padding-left: 1.2em;
+            i {
+              font-size: 1.8em;
             }
           }
         }
 
         //Ham link
         a {
-          align-items: center;
-          padding: 10px 0;
-          font: 500 16px $secondary_font;
+          font: 16px $secondary_font;
           text-transform: capitalize;
           text-decoration: none;
           text-align: center;
@@ -316,52 +319,11 @@
 #brand-logo {
   float: left;
   margin-left: 1rem;
-  font-weight: 900;
-  font-size: 45px;
-  font-family: $logo_font;
-  line-height: 50px;
-  overflow: hidden;
-  color: #333;
-  z-index: 777;
-  transition: height 300ms, background 300ms;
 
-  //Logo effect
-  #logo-effect {
-    content: "";
-    position: absolute;
-    top: 0.5rem;
-    left: 1rem;
-    width: 100%;
-    height: 60%;
-    max-width: 0;
-    background: rgb(255, 255, 255);
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    transition: none;
+  img {
+    width: 13rem;
+
   }
-
-  #spann {
-    color: #fff;
-    background: $primary_color;
-    font-style: italic;
-    font-weight: 500;
-    padding: 4px 0;
-
-    #dot {
-      color: $black_color;
-      font-weight: 600;
-    }
-  }
-}
-
-//Effect happening
-#brand-logo:hover #logo-effect {
-  z-index: 333;
-  max-width: 16rem;
-  background: rgb(241, 241, 241);
-  opacity: 0;
-  filter: alpha(opacity=0);
-  transition: all 0.6s ease-out;
 }
 
 #nav-menu {
@@ -407,7 +369,7 @@
       }
 
       &:hover {
-        height: 10rem;
+        height: auto;
 
       }
     }
@@ -436,7 +398,7 @@
       }
 
       &:hover~.dropdown {
-        height: 10rem;
+        height: auto;
       }
     }
   }
@@ -451,9 +413,11 @@
   transition: 0.35s all ease-in;
 
   #brand-logo {
-    font-size: 35px;
-    line-height: 40px;
-    transition: 0.25s all ease;
+    img {
+      width: 10rem;
+      transition: width .35s ease-in-out;
+
+    }
   }
 
   #nav-menu {

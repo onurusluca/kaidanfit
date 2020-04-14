@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #bottom-tab-bar { height: 3.3rem; overflow: visible; background-color: #fff; box-shadow: 0px -2px 5px 0px #b0b0b0; z-index: 860; } }
 
-#bottom-tab-bar label { display: flex; flex-flow: column wrap; text-align: center; color: #3f3e3e; border-right: 1px solid #c7c6c6; }
+#bottom-tab-bar label { display: flex; flex-flow: column wrap; text-align: center; color: #3f3e3e; border-right: 1px solid #e0dbdb; }
 
 #bottom-tab-bar .tab-bar-link { overflow: visible; z-index: 870; list-style: none; text-decoration: none; text-transform: capitalize; color: #333; justify-content: center; align-items: center; padding: 4px; margin-top: 4px; width: 100%; font: 600 13px "Raleway", sans-serif; }
 
@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 #bottom-tab-bar .tab-bar-link .toggle-menu li { text-align: center; width: 100%; color: #333; padding: 1.2em; border-bottom: 1px solid #d4d2d2; }
 
-#bottom-tab-bar .tab-bar-link .toggle-menu li .dropup-links { color: #333; font-size: 16px; }
+#bottom-tab-bar .tab-bar-link .toggle-menu li .dropup-links { color: #333; font-size: 14px; font-family: "Raleway", sans-serif; }
 
 #bottom-tab-bar .tab-bar-link #nav-checks { cursor: pointer; }
 
@@ -74,15 +74,15 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 #bottom-tab-bar #hamburger-container label b i:nth-child(3) { transform-origin: 26px 4px; top: 25px; }
 
-#bottom-tab-bar #hamburger-container #ham-menu { background: #fff; width: 0; display: flex; flex-flow: column wrap; justify-content: flex-end; opacity: 0; }
+#bottom-tab-bar #hamburger-container #ham-menu { background: #fff; width: 0; display: flex; flex-flow: column wrap; align-items: center; opacity: 0; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li { border-top: #a9a9a9a9 1px solid; margin: 0; list-style: none; width: 100%; height: 3.5rem; }
+#bottom-tab-bar #hamburger-container #ham-menu li { border-top: #d3cfcfa9 1px solid; margin: 0; list-style: none; width: 100%; height: 3rem; display: flex; align-items: center; justify-content: center; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(4) { display: flex; flex-flow: row wrap; justify-content: center; }
+#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) { display: flex; flex-flow: row wrap; justify-content: space-evenly; overflow: hidden; align-items: center; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(4) a img { height: 1.8em; padding-left: 1.2em; }
+#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) a i { font-size: 1.8em; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li a { align-items: center; padding: 10px 0; font: 500 16px "Raleway", sans-serif; text-transform: capitalize; text-decoration: none; text-align: center; color: #333; display: block; border-bottom: rgba(255, 255, 255, 0.2) 1px solid; }
+#bottom-tab-bar #hamburger-container #ham-menu li a { font: 16px "Raleway", sans-serif; text-transform: capitalize; text-decoration: none; text-align: center; color: #333; display: block; border-bottom: rgba(255, 255, 255, 0.2) 1px solid; }
 
 #bottom-tab-bar #hamburger-container #ham-menu li a:hover { background: rgba(0, 0, 0, 0.1); }
 
@@ -104,15 +104,9 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1200px) and (max-width: 1440px), only screen and (min-width: 1200px) { .nav-bar { display: block; } }
 
-.nav-bar #brand-logo { float: left; margin-left: 1rem; font-weight: 900; font-size: 45px; font-family: "Heebo", sans-serif; line-height: 50px; overflow: hidden; color: #333; z-index: 777; transition: height 300ms, background 300ms; }
+.nav-bar #brand-logo { float: left; margin-left: 1rem; }
 
-.nav-bar #brand-logo #logo-effect { content: ""; position: absolute; top: 0.5rem; left: 1rem; width: 100%; height: 60%; max-width: 0; background: white; opacity: 0.4; filter: alpha(opacity=40); transition: none; }
-
-.nav-bar #brand-logo #spann { color: #fff; background: #25cff5; font-style: italic; font-weight: 500; padding: 4px 0; }
-
-.nav-bar #brand-logo #spann #dot { color: #333; font-weight: 600; }
-
-.nav-bar #brand-logo:hover #logo-effect { z-index: 333; max-width: 16rem; background: #f1f1f1; opacity: 0; filter: alpha(opacity=0); transition: all 0.6s ease-out; }
+.nav-bar #brand-logo img { width: 13rem; }
 
 .nav-bar #nav-menu { display: flex; flex-direction: row; justify-content: flex-end; }
 
@@ -126,7 +120,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row .dropdown li .dropdown-links { font-size: 0.9rem; color: #2f2f30; display: inline-flex; font-family: "Raleway", sans-serif; text-decoration: none; margin: auto 2em; }
 
-.nav-bar #nav-menu .nav-row .dropdown:hover { height: 10rem; }
+.nav-bar #nav-menu .nav-row .dropdown:hover { height: auto; }
 
 .nav-bar #nav-menu .nav-row .nav-link { display: inline-flex; align-items: center; flex-flow: nowrap; font-weight: 400; font-size: 1.1em; transition: all 200ms ease; color: #333; font-family: "Montserrat", sans-serif; padding: 1em; }
 
@@ -134,11 +128,11 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row .nav-link i { font-size: 1em; margin-bottom: -3px; margin-left: 4px; }
 
-.nav-bar #nav-menu .nav-row .nav-link:hover ~ .dropdown { height: 10rem; }
+.nav-bar #nav-menu .nav-row .nav-link:hover ~ .dropdown { height: auto; }
 
 .nav-bar.scrolled { min-height: 30px; background: white; transition: 0.35s all ease-in; }
 
-.nav-bar.scrolled #brand-logo { font-size: 35px; line-height: 40px; transition: 0.25s all ease; }
+.nav-bar.scrolled #brand-logo img { width: 10rem; transition: width .35s ease-in-out; }
 
 .nav-bar.scrolled #nav-menu { margin-top: -10px; transition: 0.25s all ease-in; }
 
@@ -162,15 +156,11 @@ main { margin: 0; width: 100%; font-family: "Montserrat", sans-serif; height: 60
 
 @media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background-color: #9AB0BB; } }
 
-#mobile-brand { overflow: hidden; padding: 0; margin-top: 1em; margin-left: 1em; display: none; }
+#brand-logo { margin-top: 1em; margin-left: 1em; display: none; }
 
-@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #mobile-brand { display: block; } }
+#brand-logo img { width: 12rem; }
 
-#mobile-brand a { font-family: "Heebo", sans-serif; font-weight: 900; font-size: 45px; padding: 0; color: #333; line-height: 1.2em; }
-
-#mobile-brand a #spann { color: #fff; background: #25cff5; font-style: italic; font-weight: 500; }
-
-#mobile-brand a #spann #dot { color: #333; font-weight: 600; }
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #brand-logo { display: block; } }
 
 #jumbotron { margin-top: 18rem; margin-left: 3rem; text-align: center; align-items: center; float: left; width: 60%; }
 

@@ -18,40 +18,19 @@ main {
 
 
 //Logo for mobile
-#mobile-brand {
-
-    overflow: hidden;
-    padding: 0;
+#brand-logo {
     margin-top: 1em;
     margin-left: 1em;
     display: none;
+    img {
+        width: 12rem;
+    }
 
     @media #{$xs_mobile, $sm_mobile, $large_mobile} {
         display: block;
     }
 
-    a {
-        font-family: $logo_font;
-        font-weight: 900;
-        font-size: 45px;
-        padding: 0;
-        color: #333;
-        line-height: 1.2em;
-
-        #spann {
-            color: #fff;
-            background: $primary_color;
-            font-style: italic;
-            font-weight: 500;
-
-            #dot {
-                color: $black_color;
-                font-weight: 600;
-
-            }
-        }
-
-    }
+  
 }
 
 
