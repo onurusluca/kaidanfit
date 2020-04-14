@@ -118,7 +118,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row .dropdown { text-align: center; position: fixed; top: 4rem; margin-left: -2em; border-radius: 4px; background-color: white; transition: all 200ms ease; height: 0; opacity: 0; width: auto; }
 
-.nav-bar #nav-menu .nav-row .dropdown li { display: flex; justify-content: center; align-items: center; border-bottom: 1px solid #dddbdb; height: 3em; }
+.nav-bar #nav-menu .nav-row .dropdown li { display: flex; justify-content: center; align-items: center; border-bottom: 1px solid #dddbdb; height: 3em; overflow: visible; }
 
 .nav-bar #nav-menu .nav-row .dropdown li:hover { background-color: #f8f7f7; }
 
