@@ -156,7 +156,7 @@ body { height: 1000px; width: 100%; background-color: #eee; }
 
 main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/landing-page/main-photo.png); background-position: center; background-size: cover; }
 
-@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: #76fffd; } }
+@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: #76fffd; height: 100vh; } }
 
 #brand-logo { margin-top: 1em; margin-left: 1em; display: none; }
 
@@ -202,7 +202,7 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 #home-content .showcase { display: flex; flex-flow: column wrap; background-color: #F7FFF7; }
 
-#home-content .showcase .content { display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center; width: 100%; height: 25rem; padding: 2rem; overflow: hidden; background-color: #fff; }
+#home-content .showcase .content { display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center; width: 100%; height: 35rem; padding: 2rem; overflow: hidden; background-color: #fff; }
 
 #home-content .showcase .content img { width: 30rem; float: left; }
 
@@ -212,7 +212,7 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 #home-content .showcase .content .text p { font: 300 1.5rem "Roboto", sans-serif; }
 
-@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #home-content .showcase .content { height: 30rem; margin: 1rem 0; overflow: hidden; padding: 1.5rem; }
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1200px) { #home-content .showcase .content { height: 30rem; margin: 1rem 0; overflow: hidden; padding: 1.5rem; }
   #home-content .showcase .content img { width: 20rem; }
   #home-content .showcase .content .text { width: 32rem; }
   #home-content .showcase .content .text h4 { font: 400 2rem "Poppins", sans-serif; color: #333; margin-bottom: 1rem; }

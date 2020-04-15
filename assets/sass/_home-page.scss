@@ -10,6 +10,7 @@ main {
     @media #{$sm_mobile, $xs_mobile} {
         background-image: none;
         background: rgb(118, 255, 253);
+        height: 100vh;
     }
 
 
@@ -174,7 +175,7 @@ main {
             justify-content: space-around;
             align-items: center;
             width: 100%;
-            height: 25rem;
+            height: 35rem;
             padding: 2rem;
             overflow: hidden;
             background-color: #fff;
@@ -202,7 +203,7 @@ main {
             }
 
             //Media queries
-            @media #{$xs_mobile, $sm_mobile, $large_mobile} {
+            @media #{$xs_mobile, $sm_mobile, $large_mobile, $tab_device, $medium_device} {
                 height: 30rem;
                 margin: 1rem 0;
                 overflow: hidden;
@@ -229,17 +230,21 @@ main {
             }
 
         }
+
         #c-right {
             display: flex;
-            flex-flow: row-reverse wrap!important;
+            flex-flow: row-reverse wrap !important;
             background-color: #2D2926;
+
             .text {
-                h4, p {
+
+                h4,
+                p {
                     color: white;
                 }
             }
-            @media #{$xs_mobile, $sm_mobile, $large_mobile} {
-            }
+
+            @media #{$xs_mobile, $sm_mobile, $large_mobile} {}
 
         }
 
