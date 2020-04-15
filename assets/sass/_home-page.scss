@@ -5,7 +5,6 @@ main {
     background-image: url(/assets/img/landing-page/main-photo.png);
     background-position: center;
     background-size: cover;
-    box-shadow: 0px 6px 5px 0px rgb(196, 193, 193);
 
 
     @media #{$sm_mobile, $xs_mobile} {
@@ -22,16 +21,17 @@ main {
     margin-top: 1em;
     margin-left: 1em;
     display: none;
+
     img {
         width: 10rem;
     }
 
     @media #{$xs_mobile, $sm_mobile, $large_mobile} {
         display: block;
-        
+
     }
 
-  
+
 }
 
 
@@ -59,7 +59,7 @@ main {
 
     }
 
-   
+
 
     //Main image for mobile
     #mobile-main-image {
@@ -153,64 +153,38 @@ main {
 
 }
 
+
 //MAIN CONTENT OF HOME PAGE
 #home-content {
-    margin-top: -3rem;
+
     h2 {
         text-align: center;
         font: 400 3rem $primary_font;
 
     }
+
     .showcase {
         display: flex;
-        flex-flow: column nowrap;
-    
-        .content-left {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-            height: 20rem;
-            margin: 3rem 0;
-            padding: 2rem;
-       
-            img {
-                width: 30rem;
-                float: left;
-             }
-            .text {
-                display: flex;
-                flex-flow: column;
-                text-align: center;
-                width: 35rem;
-                h4 {
-                    font: 400 3rem $primary_font;
-                    color: $black_color;
-                }
-                p {
-                    font: 300 1.5rem $secondary_font;
+        flex-flow: column wrap;
+        background-color: #F7FFF7;
 
-                }
-            }
-          
-        }
-        
-        .content-right {
+        .content {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
             justify-content: space-around;
             align-items: center;
             width: 100%;
             height: 30rem;
-            margin: 3rem 0;
+            margin: 2rem 0;
             padding: 2rem;
-            background-color: white;
+            overflow: hidden;
+            background-color: #fff;
 
             img {
                 width: 30rem;
-                float: right;
-             }
+                float: left;
+            }
+
             .text {
                 display: flex;
                 flex-flow: column;
@@ -221,11 +195,50 @@ main {
                     font: 400 3rem $primary_font;
                     color: $black_color;
                 }
+
                 p {
                     font: 300 1.5rem $secondary_font;
+
                 }
             }
+
+            //Media queries
+            @media #{$xs_mobile, $sm_mobile, $large_mobile} {
+                height: 30rem;
+                margin: 1rem 0;
+                overflow: hidden;
+                padding: 1.5rem;
+
+                img {
+                    width: 20rem;
+                }
+
+                .text {
+                    width: 32rem;
+
+                    h4 {
+                        font: 400 2rem $primary_font;
+                        color: $black_color;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        font: 300 1.3rem $secondary_font;
+
+                    }
+                }
+            }
+
         }
-        
+        #c-right {
+            display: flex;
+            flex-flow: row-reverse wrap!important;
+            @media #{$xs_mobile, $sm_mobile, $large_mobile} {
+            }
+
+        }
+
+
+
     }
 }

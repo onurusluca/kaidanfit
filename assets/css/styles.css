@@ -20,7 +20,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 #bottom-tab-bar { position: fixed; bottom: 0; margin: 0; display: grid; grid-template-columns: 3fr 3fr 3fr 1.5fr; height: 0; opacity: 1; transition: 300ms all; width: 100%; }
 
-@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #bottom-tab-bar { height: 3.3rem; overflow: visible; background-color: #fff; box-shadow: 0px -2px 5px 0px #b0b0b0; z-index: 860; } }
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #bottom-tab-bar { height: 3.3rem; overflow: visible; background-color: white; z-index: 860; } }
 
 #bottom-tab-bar label { display: flex; flex-flow: column wrap; text-align: center; color: #3f3e3e; border-right: 1px solid #e0dbdb; }
 
@@ -44,19 +44,19 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 #bottom-tab-bar .tab-bar-link #saglik-menu { height: 0; }
 
-#bottom-tab-bar .tab-bar-link #nav-1:checked ~ label { color: #FEE715; overflow: auto; }
+#bottom-tab-bar .tab-bar-link #nav-1:checked ~ label { color: #3FC0BE; overflow: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-1:checked ~ label ul { height: 111px; }
 
 #bottom-tab-bar .tab-bar-link #nav-1:checked ~ #fitness-menu { height: auto; }
 
-#bottom-tab-bar .tab-bar-link #nav-2:checked ~ label { color: #FEE715; overflow: auto; }
+#bottom-tab-bar .tab-bar-link #nav-2:checked ~ label { color: #3FC0BE; overflow: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-2:checked ~ label ul { height: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-2:checked ~ #beslenme-menu { height: auto; }
 
-#bottom-tab-bar .tab-bar-link #nav-3:checked ~ label { color: #FEE715; overflow: auto; }
+#bottom-tab-bar .tab-bar-link #nav-3:checked ~ label { color: #3FC0BE; overflow: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-3:checked ~ #saglik-menu { height: auto; }
 
@@ -78,9 +78,11 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 #bottom-tab-bar #hamburger-container #ham-menu li { border-top: #d3cfcfa9 1px solid; margin: 0; list-style: none; width: 100%; height: 3rem; display: flex; align-items: center; justify-content: center; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) { display: flex; flex-flow: row wrap; justify-content: space-evenly; overflow: hidden; align-items: center; }
+#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) { display: flex; flex-flow: row nowrap; justify-content: space-evenly; overflow: hidden; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) a i { font-size: 1.8em; color: #333; }
+#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) a { display: flex; align-items: center; }
+
+#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) a i { font-size: 1.6em; color: #333; }
 
 #bottom-tab-bar #hamburger-container #ham-menu li a { font: 400 16px "Poppins", sans-serif; text-transform: capitalize; text-decoration: none; text-align: center; color: #333; display: block; border-bottom: rgba(255, 255, 255, 0.2) 1px solid; }
 
@@ -88,7 +90,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 #bottom-tab-bar #hamburger-container #nav:checked ~ label b { transition-delay: 100ms; }
 
-#bottom-tab-bar #hamburger-container #nav:checked ~ label b i { background-color: #FEE715; }
+#bottom-tab-bar #hamburger-container #nav:checked ~ label b i { background-color: #3FC0BE; }
 
 #bottom-tab-bar #hamburger-container #nav:checked ~ label b i:nth-child(1) { transform: rotate(45deg) translate(6px, 11px); }
 
@@ -138,7 +140,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 body { height: 1000px; width: 100%; background-color: #eee; }
 
-#button-up { display: inline-block; background-color: #ff9800; width: 40px; height: 40px; text-align: center; align-items: center; border-radius: 4px; position: fixed; bottom: 30px; right: 30px; transition: background-color 0.2s, opacity 0.3s, visibility 0.3s; opacity: 0; visibility: hidden; overflow: hidden; z-index: 600; }
+#button-up { display: inline-block; background-color: #FEE715; width: 40px; height: 40px; text-align: center; align-items: center; border-radius: 4px; position: fixed; bottom: 30px; right: 30px; transition: background-color 0.2s, opacity 0.3s, visibility 0.3s; opacity: 0; visibility: hidden; overflow: hidden; z-index: 600; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #button-up { bottom: 60px; width: 30px; height: 30px; } }
 
@@ -152,7 +154,7 @@ body { height: 1000px; width: 100%; background-color: #eee; }
 
 #button-up.show { opacity: 1; visibility: visible; }
 
-main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/landing-page/main-photo.png); background-position: center; background-size: cover; box-shadow: 0px 6px 5px 0px #c4c1c1; }
+main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/landing-page/main-photo.png); background-position: center; background-size: cover; }
 
 @media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: #3FC0BE; } }
 
@@ -196,29 +198,25 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 #jumbotron .myButton:active { position: relative; top: 1px; }
 
-#home-content { margin-top: -3rem; }
-
 #home-content h2 { text-align: center; font: 400 3rem "Poppins", sans-serif; }
 
-#home-content .showcase { display: flex; flex-flow: column nowrap; }
+#home-content .showcase { display: flex; flex-flow: column wrap; background-color: #F7FFF7; }
 
-#home-content .showcase .content-left { display: flex; flex-flow: row nowrap; justify-content: space-around; align-items: center; width: 100%; height: 20rem; margin: 3rem 0; padding: 2rem; }
+#home-content .showcase .content { display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center; width: 100%; height: 30rem; margin: 2rem 0; padding: 2rem; overflow: hidden; background-color: #fff; }
 
-#home-content .showcase .content-left img { width: 30rem; float: left; }
+#home-content .showcase .content img { width: 30rem; float: left; }
 
-#home-content .showcase .content-left .text { display: flex; flex-flow: column; text-align: center; width: 35rem; }
+#home-content .showcase .content .text { display: flex; flex-flow: column; text-align: center; width: 35rem; }
 
-#home-content .showcase .content-left .text h4 { font: 400 3rem "Poppins", sans-serif; color: #333; }
+#home-content .showcase .content .text h4 { font: 400 3rem "Poppins", sans-serif; color: #333; }
 
-#home-content .showcase .content-left .text p { font: 300 1.5rem "Roboto", sans-serif; }
+#home-content .showcase .content .text p { font: 300 1.5rem "Roboto", sans-serif; }
 
-#home-content .showcase .content-right { display: flex; flex-flow: row nowrap; justify-content: space-around; align-items: center; width: 100%; height: 30rem; margin: 3rem 0; padding: 2rem; background-color: white; }
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #home-content .showcase .content { height: 30rem; margin: 1rem 0; overflow: hidden; padding: 1.5rem; }
+  #home-content .showcase .content img { width: 20rem; }
+  #home-content .showcase .content .text { width: 32rem; }
+  #home-content .showcase .content .text h4 { font: 400 2rem "Poppins", sans-serif; color: #333; margin-bottom: 1rem; }
+  #home-content .showcase .content .text p { font: 300 1.3rem "Roboto", sans-serif; } }
 
-#home-content .showcase .content-right img { width: 30rem; float: right; }
-
-#home-content .showcase .content-right .text { display: flex; flex-flow: column; text-align: center; width: 35rem; }
-
-#home-content .showcase .content-right .text h4 { font: 400 3rem "Poppins", sans-serif; color: #333; }
-
-#home-content .showcase .content-right .text p { font: 300 1.5rem "Roboto", sans-serif; }
+#home-content .showcase #c-right { display: flex; flex-flow: row-reverse wrap !important; }
 /*# sourceMappingURL=styles.css.map */

@@ -14,8 +14,7 @@
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
     height: 3.3rem;
     overflow: visible;
-    background-color: #fff;
-    box-shadow: 0px -2px 5px 0px rgba(176, 176, 176, 1);
+    background-color: rgb(255, 255, 255);
     z-index: 860;
   }
 
@@ -104,7 +103,7 @@
     //Inputs for menu toggle
 
     #nav-1:checked~label {
-      color: $primary_color;
+      color: #3FC0BE;
       overflow: auto;
 
       ul {
@@ -118,7 +117,7 @@
     }
 
     #nav-2:checked~label {
-      color: $primary_color;
+      color: #3FC0BE;
       overflow: auto;
 
       ul {
@@ -132,7 +131,7 @@
     }
 
     #nav-3:checked~label {
-      color: $primary_color;
+      color: #3FC0BE;
       overflow: auto;
     }
 
@@ -218,14 +217,14 @@
         //Social Media Buttons
         &:nth-child(1) {
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: row nowrap;
           justify-content: space-evenly;
           overflow: hidden;
-          align-items: center;
-
           a {
+            display: flex;
+            align-items: center;
             i {
-              font-size: 1.8em;
+              font-size: 1.6em;
               color: $black_color;
 
             }
@@ -256,7 +255,7 @@
         transition-delay: 100ms;
 
         i {
-          background-color: $primary_color;
+          background-color: #3FC0BE;
 
           &:nth-child(1) {
             transform: rotate(45deg) translate(6px, 11px);
@@ -439,7 +438,7 @@ body {
 //Button for returning to top
 #button-up {
   display: inline-block;
-  background-color: #ff9800;
+  background-color: $primary_color;
   width: 40px;
   height: 40px;
   text-align: center;
