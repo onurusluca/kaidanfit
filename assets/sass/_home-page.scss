@@ -9,7 +9,7 @@ main {
 
     @media #{$sm_mobile, $xs_mobile} {
         background-image: none;
-        background: #3FC0BE;
+        background: rgb(118, 255, 253);
     }
 
 
@@ -174,8 +174,7 @@ main {
             justify-content: space-around;
             align-items: center;
             width: 100%;
-            height: 30rem;
-            margin: 2rem 0;
+            height: 25rem;
             padding: 2rem;
             overflow: hidden;
             background-color: #fff;
@@ -233,6 +232,12 @@ main {
         #c-right {
             display: flex;
             flex-flow: row-reverse wrap!important;
+            background-color: #2D2926;
+            .text {
+                h4, p {
+                    color: white;
+                }
+            }
             @media #{$xs_mobile, $sm_mobile, $large_mobile} {
             }
 

@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #bottom-tab-bar { height: 3.3rem; overflow: visible; background-color: white; z-index: 860; } }
 
-#bottom-tab-bar label { display: flex; flex-flow: column wrap; text-align: center; color: #3f3e3e; border-right: 1px solid #e0dbdb; }
+#bottom-tab-bar label { display: flex; flex-flow: column wrap; text-align: center; color: #3f3e3e; border-right: 1px solid #e9e6e6; }
 
 #bottom-tab-bar .tab-bar-link { overflow: visible; z-index: 870; list-style: none; text-decoration: none; text-transform: capitalize; color: #333; justify-content: center; align-items: center; padding: 4px; margin-top: 4px; width: 100%; font: 500 13px "Poppins", sans-serif; }
 
@@ -156,7 +156,7 @@ body { height: 1000px; width: 100%; background-color: #eee; }
 
 main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/landing-page/main-photo.png); background-position: center; background-size: cover; }
 
-@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: #3FC0BE; } }
+@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: #76fffd; } }
 
 #brand-logo { margin-top: 1em; margin-left: 1em; display: none; }
 
@@ -202,7 +202,7 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 #home-content .showcase { display: flex; flex-flow: column wrap; background-color: #F7FFF7; }
 
-#home-content .showcase .content { display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center; width: 100%; height: 30rem; margin: 2rem 0; padding: 2rem; overflow: hidden; background-color: #fff; }
+#home-content .showcase .content { display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center; width: 100%; height: 25rem; padding: 2rem; overflow: hidden; background-color: #fff; }
 
 #home-content .showcase .content img { width: 30rem; float: left; }
 
@@ -218,5 +218,7 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
   #home-content .showcase .content .text h4 { font: 400 2rem "Poppins", sans-serif; color: #333; margin-bottom: 1rem; }
   #home-content .showcase .content .text p { font: 300 1.3rem "Roboto", sans-serif; } }
 
-#home-content .showcase #c-right { display: flex; flex-flow: row-reverse wrap !important; }
+#home-content .showcase #c-right { display: flex; flex-flow: row-reverse wrap !important; background-color: #2D2926; }
+
+#home-content .showcase #c-right .text h4, #home-content .showcase #c-right .text p { color: white; }
 /*# sourceMappingURL=styles.css.map */
