@@ -1,16 +1,16 @@
 main {
     margin: 0;
     width: 100%;
-    font-family: $primary_font;
-    height: 60rem;
+    height: 120vh;
     background-image: url(/assets/img/landing-page/main-photo.png);
     background-position: center;
     background-size: cover;
+    box-shadow: 0px 6px 5px 0px rgb(196, 193, 193);
 
 
     @media #{$sm_mobile, $xs_mobile} {
         background-image: none;
-        background-color: #9AB0BB;
+        background: #3FC0BE;
     }
 
 
@@ -23,11 +23,12 @@ main {
     margin-left: 1em;
     display: none;
     img {
-        width: 12rem;
+        width: 10rem;
     }
 
     @media #{$xs_mobile, $sm_mobile, $large_mobile} {
         display: block;
+        
     }
 
   
@@ -44,19 +45,21 @@ main {
     float: left;
     width: 60%;
 
-    @media #{$xs_mobile, $sm_mobile} {
-        width: 75%;
-        margin-top: 4rem;
-    }
-
     @media #{$large_mobile} {
-
+        width: 65%;
         margin-top: 6rem;
+
     }
 
-    img {
-        width: 7rem;
+    @media #{$xs_mobile, $sm_mobile} {
+        width: 90%;
+        margin-top: 2rem;
+        float: none;
+        margin-left: 1rem;
+
     }
+
+   
 
     //Main image for mobile
     #mobile-main-image {
@@ -65,6 +68,8 @@ main {
         display: block;
         display: none;
         margin-bottom: 1rem;
+        margin-top: 2rem;
+
 
         @media #{$xs_mobile, $sm_mobile} {
             display: inline-block;
@@ -75,17 +80,13 @@ main {
 
 
 
-
-
     }
 
     h1 {
         color: $black_color;
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
         overflow: visible;
-        font-family: $secondary_font;
-        font-size: 3rem;
-        font-weight: 700;
+        font: 400 3rem $primary_font;
 
         @media #{$large_mobile} {
             font-size: 2rem;
@@ -104,12 +105,10 @@ main {
     }
 
     h2 {
-        font-size: 2rem;
-
-        font-weight: 400;
         overflow: visible;
         color: #333;
-        font-family: $secondary_font;
+        font: 300 1.8rem $secondary_font;
+
 
         @media #{$large_mobile} {
             font-size: 1.6rem;
@@ -131,9 +130,8 @@ main {
         cursor: pointer;
         color: #ffffff;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.86);
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 2rem;
+        font: 300 18px $primary_font;
+        margin-top: 4rem;
         padding: 16px 31px;
         text-decoration: none;
         transition: all 300ms;
@@ -155,7 +153,79 @@ main {
 
 }
 
-
+//MAIN CONTENT OF HOME PAGE
 #home-content {
-    margin: 2em;
+    margin-top: -3rem;
+    h2 {
+        text-align: center;
+        font: 400 3rem $primary_font;
+
+    }
+    .showcase {
+        display: flex;
+        flex-flow: column nowrap;
+    
+        .content-left {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 20rem;
+            margin: 3rem 0;
+            padding: 2rem;
+       
+            img {
+                width: 30rem;
+                float: left;
+             }
+            .text {
+                display: flex;
+                flex-flow: column;
+                text-align: center;
+                width: 35rem;
+                h4 {
+                    font: 400 3rem $primary_font;
+                    color: $black_color;
+                }
+                p {
+                    font: 300 1.5rem $secondary_font;
+
+                }
+            }
+          
+        }
+        
+        .content-right {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 30rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: white;
+
+            img {
+                width: 30rem;
+                float: right;
+             }
+            .text {
+                display: flex;
+                flex-flow: column;
+                text-align: center;
+                width: 35rem;
+
+                h4 {
+                    font: 400 3rem $primary_font;
+                    color: $black_color;
+                }
+                p {
+                    font: 300 1.5rem $secondary_font;
+                }
+            }
+        }
+        
+    }
 }

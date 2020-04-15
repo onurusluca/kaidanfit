@@ -3,11 +3,10 @@
 
 
 //Fonts
-$primary_font: 'Montserrat',sans-serif; //For text and stuff
-$secondary_font: 'Raleway',sans-serif; //For navigation
-$logo_font: 'Heebo', sans-serif; //For Titles
+$primary_font: 'Poppins', sans-serif; //For Titles 300, 400, 500, 600
+$secondary_font: 'Roboto', sans-serif; //For text and stuff 400, 500
 //Colors
-$primary_color: #25cff5;
+$primary_color: #FEE715;
 $secondary_color: #818181;
 
 
@@ -42,11 +41,10 @@ body,
 html{
     width: 100%;
     height: 100%;
-    font-family: $primary_font;
-    line-height: 1.6rem;
     scroll-behavior: smooth;
     box-sizing: border-box;
     overflow-x: visible;
+    background-color: #F7FFF7;
 
 }
 
@@ -54,13 +52,15 @@ html{
 
 h1,
 h2,
-h3 {
-    font: 600 2.5rem $primary_font;
-    line-height: 1.4;
+h3,
+h4,
+h5 {
+    font: $primary_font;
+    color: $black_color;
 }
 
 p {
-    font: 400 1.4rem/1.625rem $primary_color;
+    color: $black_color;
 }
 
 a {

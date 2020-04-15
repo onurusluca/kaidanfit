@@ -42,7 +42,7 @@
     margin-top: 4px;
     width: 100%;
 
-    font: 600 13px $secondary_font;
+    font: 500 13px $primary_font;
 
     #nav-1,
     #nav-2,
@@ -78,7 +78,8 @@
         .dropup-links {
           color: $black_color;
           font-size: 14px;
-          font-family: $secondary_font;
+          font: 400 16px $primary_font;
+
         }
       }
     }
@@ -225,13 +226,15 @@
           a {
             i {
               font-size: 1.8em;
+              color: $black_color;
+
             }
           }
         }
 
         //Ham link
         a {
-          font: 16px $secondary_font;
+          font: 400 16px $primary_font;
           text-transform: capitalize;
           text-decoration: none;
           text-align: center;
@@ -317,9 +320,10 @@
 
 //Logo
 #brand-logo {
+  display: block;
   float: left;
   margin-left: 1rem;
-
+  margin-top: -0.5rem;
   img {
     width: 13rem;
 
@@ -359,10 +363,10 @@
         }
 
         .dropdown-links {
-          font-size: 0.9rem;
+        
           color: $text_color;
           display: inline-flex;
-          font-family: $secondary_font;
+          font: 300 16px $primary_font;
           text-decoration: none;
           margin: auto 2em;
         }

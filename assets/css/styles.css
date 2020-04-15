@@ -2,11 +2,11 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; overflow-x: auto; }
 
-body, html { width: 100%; height: 100%; font-family: "Montserrat", sans-serif; line-height: 1.6rem; scroll-behavior: smooth; box-sizing: border-box; overflow-x: visible; }
+body, html { width: 100%; height: 100%; scroll-behavior: smooth; box-sizing: border-box; overflow-x: visible; background-color: #F7FFF7; }
 
-h1, h2, h3 { font: 600 2.5rem "Montserrat", sans-serif; line-height: 1.4; }
+h1, h2, h3, h4, h5 { font: "Poppins", sans-serif; color: #333; }
 
-p { font: 400 1.4rem/1.625rem #25cff5; }
+p { color: #333; }
 
 a { color: #333; text-decoration: none; }
 
@@ -16,7 +16,7 @@ body::-webkit-scrollbar { width: 0.85rem; }
 
 body::-webkit-scrollbar-track { background: #333; }
 
-body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
+body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 #bottom-tab-bar { position: fixed; bottom: 0; margin: 0; display: grid; grid-template-columns: 3fr 3fr 3fr 1.5fr; height: 0; opacity: 1; transition: 300ms all; width: 100%; }
 
@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 #bottom-tab-bar label { display: flex; flex-flow: column wrap; text-align: center; color: #3f3e3e; border-right: 1px solid #e0dbdb; }
 
-#bottom-tab-bar .tab-bar-link { overflow: visible; z-index: 870; list-style: none; text-decoration: none; text-transform: capitalize; color: #333; justify-content: center; align-items: center; padding: 4px; margin-top: 4px; width: 100%; font: 600 13px "Raleway", sans-serif; }
+#bottom-tab-bar .tab-bar-link { overflow: visible; z-index: 870; list-style: none; text-decoration: none; text-transform: capitalize; color: #333; justify-content: center; align-items: center; padding: 4px; margin-top: 4px; width: 100%; font: 500 13px "Poppins", sans-serif; }
 
 #bottom-tab-bar .tab-bar-link #nav-1, #bottom-tab-bar .tab-bar-link #nav-2, #bottom-tab-bar .tab-bar-link #nav-3 { display: none; }
 
@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 #bottom-tab-bar .tab-bar-link .toggle-menu li { text-align: center; width: 100%; color: #333; padding: 1.2em; border-bottom: 1px solid #d4d2d2; }
 
-#bottom-tab-bar .tab-bar-link .toggle-menu li .dropup-links { color: #333; font-size: 14px; font-family: "Raleway", sans-serif; }
+#bottom-tab-bar .tab-bar-link .toggle-menu li .dropup-links { color: #333; font-size: 14px; font: 400 16px "Poppins", sans-serif; }
 
 #bottom-tab-bar .tab-bar-link #nav-checks { cursor: pointer; }
 
@@ -44,19 +44,19 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 #bottom-tab-bar .tab-bar-link #saglik-menu { height: 0; }
 
-#bottom-tab-bar .tab-bar-link #nav-1:checked ~ label { color: #25cff5; overflow: auto; }
+#bottom-tab-bar .tab-bar-link #nav-1:checked ~ label { color: #FEE715; overflow: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-1:checked ~ label ul { height: 111px; }
 
 #bottom-tab-bar .tab-bar-link #nav-1:checked ~ #fitness-menu { height: auto; }
 
-#bottom-tab-bar .tab-bar-link #nav-2:checked ~ label { color: #25cff5; overflow: auto; }
+#bottom-tab-bar .tab-bar-link #nav-2:checked ~ label { color: #FEE715; overflow: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-2:checked ~ label ul { height: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-2:checked ~ #beslenme-menu { height: auto; }
 
-#bottom-tab-bar .tab-bar-link #nav-3:checked ~ label { color: #25cff5; overflow: auto; }
+#bottom-tab-bar .tab-bar-link #nav-3:checked ~ label { color: #FEE715; overflow: auto; }
 
 #bottom-tab-bar .tab-bar-link #nav-3:checked ~ #saglik-menu { height: auto; }
 
@@ -80,15 +80,15 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 #bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) { display: flex; flex-flow: row wrap; justify-content: space-evenly; overflow: hidden; align-items: center; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) a i { font-size: 1.8em; }
+#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) a i { font-size: 1.8em; color: #333; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li a { font: 16px "Raleway", sans-serif; text-transform: capitalize; text-decoration: none; text-align: center; color: #333; display: block; border-bottom: rgba(255, 255, 255, 0.2) 1px solid; }
+#bottom-tab-bar #hamburger-container #ham-menu li a { font: 400 16px "Poppins", sans-serif; text-transform: capitalize; text-decoration: none; text-align: center; color: #333; display: block; border-bottom: rgba(255, 255, 255, 0.2) 1px solid; }
 
 #bottom-tab-bar #hamburger-container #ham-menu li a:hover { background: rgba(0, 0, 0, 0.1); }
 
 #bottom-tab-bar #hamburger-container #nav:checked ~ label b { transition-delay: 100ms; }
 
-#bottom-tab-bar #hamburger-container #nav:checked ~ label b i { background-color: #25cff5; }
+#bottom-tab-bar #hamburger-container #nav:checked ~ label b i { background-color: #FEE715; }
 
 #bottom-tab-bar #hamburger-container #nav:checked ~ label b i:nth-child(1) { transform: rotate(45deg) translate(6px, 11px); }
 
@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1200px) and (max-width: 1440px), only screen and (min-width: 1200px) { .nav-bar { display: block; } }
 
-.nav-bar #brand-logo { float: left; margin-left: 1rem; }
+.nav-bar #brand-logo { display: block; float: left; margin-left: 1rem; margin-top: -0.5rem; }
 
 .nav-bar #brand-logo img { width: 13rem; }
 
@@ -118,11 +118,11 @@ body::-webkit-scrollbar-thumb { background: #25cff5; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row .dropdown li:hover { background-color: #f8f7f7; }
 
-.nav-bar #nav-menu .nav-row .dropdown li .dropdown-links { font-size: 0.9rem; color: #2f2f30; display: inline-flex; font-family: "Raleway", sans-serif; text-decoration: none; margin: auto 2em; }
+.nav-bar #nav-menu .nav-row .dropdown li .dropdown-links { color: #2f2f30; display: inline-flex; font: 300 16px "Poppins", sans-serif; text-decoration: none; margin: auto 2em; }
 
 .nav-bar #nav-menu .nav-row .dropdown:hover { height: auto; }
 
-.nav-bar #nav-menu .nav-row .nav-link { display: inline-flex; align-items: center; flex-flow: nowrap; font-weight: 400; font-size: 1.1em; transition: all 200ms ease; color: #333; font-family: "Montserrat", sans-serif; padding: 1em; }
+.nav-bar #nav-menu .nav-row .nav-link { display: inline-flex; align-items: center; flex-flow: nowrap; font-weight: 400; font-size: 1.1em; transition: all 200ms ease; color: #333; font-family: "Poppins", sans-serif; padding: 1em; }
 
 .nav-bar #nav-menu .nav-row .nav-link:hover { color: #535252; }
 
@@ -152,29 +152,27 @@ body { height: 1000px; width: 100%; background-color: #eee; }
 
 #button-up.show { opacity: 1; visibility: visible; }
 
-main { margin: 0; width: 100%; font-family: "Montserrat", sans-serif; height: 60rem; background-image: url(/assets/img/landing-page/main-photo.png); background-position: center; background-size: cover; }
+main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/landing-page/main-photo.png); background-position: center; background-size: cover; box-shadow: 0px 6px 5px 0px #c4c1c1; }
 
-@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background-color: #9AB0BB; } }
+@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: #3FC0BE; } }
 
 #brand-logo { margin-top: 1em; margin-left: 1em; display: none; }
 
-#brand-logo img { width: 12rem; }
+#brand-logo img { width: 10rem; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #brand-logo { display: block; } }
 
 #jumbotron { margin-top: 18rem; margin-left: 3rem; text-align: center; align-items: center; float: left; width: 60%; }
 
-@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron { width: 75%; margin-top: 4rem; } }
+@media only screen and (min-width: 576px) and (max-width: 767px) { #jumbotron { width: 65%; margin-top: 6rem; } }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) { #jumbotron { margin-top: 6rem; } }
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron { width: 90%; margin-top: 2rem; float: none; margin-left: 1rem; } }
 
-#jumbotron img { width: 7rem; }
-
-#jumbotron #mobile-main-image { display: flex; justify-content: center; display: block; display: none; margin-bottom: 1rem; }
+#jumbotron #mobile-main-image { display: flex; justify-content: center; display: block; display: none; margin-bottom: 1rem; margin-top: 2rem; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron #mobile-main-image { display: inline-block; margin-bottom: 1rem; width: 13rem; } }
 
-#jumbotron h1 { color: #333; margin-bottom: 1em; overflow: visible; font-family: "Raleway", sans-serif; font-size: 3rem; font-weight: 700; }
+#jumbotron h1 { color: #333; margin-bottom: 1rem; overflow: visible; font: 400 3rem "Poppins", sans-serif; }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) { #jumbotron h1 { font-size: 2rem; } }
 
@@ -182,7 +180,7 @@ main { margin: 0; width: 100%; font-family: "Montserrat", sans-serif; height: 60
 
 @media (max-width: 420px) { #jumbotron h1 { font-size: 1.5rem; margin-bottom: 0.2em; } }
 
-#jumbotron h2 { font-size: 2rem; font-weight: 400; overflow: visible; color: #333; font-family: "Raleway", sans-serif; }
+#jumbotron h2 { overflow: visible; color: #333; font: 300 1.8rem "Roboto", sans-serif; }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) { #jumbotron h2 { font-size: 1.6rem; } }
 
@@ -190,7 +188,7 @@ main { margin: 0; width: 100%; font-family: "Montserrat", sans-serif; height: 60
 
 @media (max-width: 420px) { #jumbotron h2 { font-size: 1.3rem; } }
 
-#jumbotron .myButton { background-color: #06c054; border-radius: 4px; display: inline-block; cursor: pointer; color: #ffffff; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.86); font-size: 18px; font-weight: bold; margin-top: 2rem; padding: 16px 31px; text-decoration: none; transition: all 300ms; }
+#jumbotron .myButton { background-color: #06c054; border-radius: 4px; display: inline-block; cursor: pointer; color: #ffffff; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.86); font: 300 18px "Poppins", sans-serif; margin-top: 4rem; padding: 16px 31px; text-decoration: none; transition: all 300ms; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron .myButton { margin-top: 1rem; } }
 
@@ -198,5 +196,29 @@ main { margin: 0; width: 100%; font-family: "Montserrat", sans-serif; height: 60
 
 #jumbotron .myButton:active { position: relative; top: 1px; }
 
-#home-content { margin: 2em; }
+#home-content { margin-top: -3rem; }
+
+#home-content h2 { text-align: center; font: 400 3rem "Poppins", sans-serif; }
+
+#home-content .showcase { display: flex; flex-flow: column nowrap; }
+
+#home-content .showcase .content-left { display: flex; flex-flow: row nowrap; justify-content: space-around; align-items: center; width: 100%; height: 20rem; margin: 3rem 0; padding: 2rem; }
+
+#home-content .showcase .content-left img { width: 30rem; float: left; }
+
+#home-content .showcase .content-left .text { display: flex; flex-flow: column; text-align: center; width: 35rem; }
+
+#home-content .showcase .content-left .text h4 { font: 400 3rem "Poppins", sans-serif; color: #333; }
+
+#home-content .showcase .content-left .text p { font: 300 1.5rem "Roboto", sans-serif; }
+
+#home-content .showcase .content-right { display: flex; flex-flow: row nowrap; justify-content: space-around; align-items: center; width: 100%; height: 30rem; margin: 3rem 0; padding: 2rem; background-color: white; }
+
+#home-content .showcase .content-right img { width: 30rem; float: right; }
+
+#home-content .showcase .content-right .text { display: flex; flex-flow: column; text-align: center; width: 35rem; }
+
+#home-content .showcase .content-right .text h4 { font: 400 3rem "Poppins", sans-serif; color: #333; }
+
+#home-content .showcase .content-right .text p { font: 300 1.5rem "Roboto", sans-serif; }
 /*# sourceMappingURL=styles.css.map */
