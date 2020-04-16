@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 #bottom-tab-bar #hamburger-container #ham-menu li { border-top: #d3cfcfa9 1px solid; margin: 0; list-style: none; width: 100%; height: 3rem; display: flex; align-items: center; justify-content: center; }
 
-#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) { display: flex; flex-flow: row nowrap; justify-content: space-evenly; overflow: hidden; }
+#bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) { display: flex; flex-flow: row wrap; justify-content: space-evenly; overflow: hidden; }
 
 #bottom-tab-bar #hamburger-container #ham-menu li:nth-child(1) a { display: flex; align-items: center; }
 
@@ -102,11 +102,13 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 #bottom-tab-bar.hide-tab-bar { width: 0; opacity: 0; }
 
-.nav-bar { background: none; overflow: hidden; position: fixed; top: 0; padding: 1rem 0; width: 100%; height: 4rem; transition: 0.4s; display: none; z-index: 99; }
+.nav-bar { background: none; overflow: hidden; position: fixed; top: 0; padding: 1rem 0; width: 100%; height: 6rem; transition: 0.4s; display: none; z-index: 99; }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1200px) and (max-width: 1440px), only screen and (min-width: 1200px) { .nav-bar { display: block; } }
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1200px) and (max-width: 1440px), only screen and (min-width: 1200px) { .nav-bar { display: block; height: 4rem; } }
 
-.nav-bar #brand-logo { display: block; float: left; margin-left: 1rem; margin-top: -0.5rem; }
+.nav-bar #brand-logo { display: block; float: left; margin-left: 1rem; margin-top: -0.5rem; transition: all 0.5s; }
+
+.nav-bar #brand-logo:hover { transform: scale(1.1); }
 
 .nav-bar #brand-logo img { width: 13rem; }
 
@@ -144,7 +146,7 @@ body { height: 1000px; width: 100%; background-color: #eee; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #button-up { bottom: 60px; width: 30px; height: 30px; } }
 
-#button-up::after { content: "\f077"; font-family: FontAwesome; font-weight: normal; font-style: normal; font-size: 2em; line-height: 40px; color: #fff; }
+#button-up::after { content: "\f077"; font-family: FontAwesome; font-weight: normal; font-style: normal; font-size: 2em; line-height: 40px; color: #7a7a7a; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #button-up::after { line-height: 30px; font-size: 1.5em; } }
 
@@ -156,7 +158,7 @@ body { height: 1000px; width: 100%; background-color: #eee; }
 
 main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/landing-page/main-photo.png); background-position: center; background-size: cover; }
 
-@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: #76fffd; height: 100vh; } }
+@media only screen and (min-width: 421px) and (max-width: 575px), (max-width: 420px) { main { background-image: none; background: rgba(75, 153, 206, 0.267); height: 100vh; } }
 
 #brand-logo { margin-top: 1em; margin-left: 1em; display: none; }
 
@@ -164,11 +166,15 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #brand-logo { display: block; } }
 
-#jumbotron { margin-top: 18rem; margin-left: 3rem; text-align: center; align-items: center; float: left; width: 60%; }
-
-@media only screen and (min-width: 576px) and (max-width: 767px) { #jumbotron { width: 65%; margin-top: 6rem; } }
+#jumbotron { margin-top: 15rem; margin-left: 3rem; text-align: center; align-items: center; float: left; width: 60%; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron { width: 90%; margin-top: 2rem; float: none; margin-left: 1rem; } }
+
+@media only screen and (min-width: 576px) and (max-width: 767px) { #jumbotron { width: 65%; margin-top: 10rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { #jumbotron { width: 65%; margin-top: 15rem; margin-left: 1rem; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) { #jumbotron { width: 65%; margin-top: 12rem; margin-left: 1rem; } }
 
 #jumbotron #mobile-main-image { display: flex; justify-content: center; display: block; display: none; margin-bottom: 1rem; margin-top: 2rem; }
 
@@ -190,11 +196,11 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 @media (max-width: 420px) { #jumbotron h2 { font-size: 1.3rem; } }
 
-#jumbotron .myButton { background-color: #06c054; border-radius: 4px; display: inline-block; cursor: pointer; color: #ffffff; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.86); font: 300 18px "Poppins", sans-serif; margin-top: 4rem; padding: 16px 31px; text-decoration: none; transition: all 300ms; }
+#jumbotron .myButton { background-color: #FEE715; border-radius: 4px; display: inline-block; cursor: pointer; color: #333; font: 400 18px "Poppins", sans-serif; margin-top: 4rem; padding: 16px 31px; text-decoration: none; transition: all 300ms; }
 
-@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron .myButton { margin-top: 1rem; } }
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron .myButton { margin-top: 2rem; } }
 
-#jumbotron .myButton:hover { background-color: #05aa4a; }
+#jumbotron .myButton:hover { background-color: #333; color: white; }
 
 #jumbotron .myButton:active { position: relative; top: 1px; }
 
@@ -202,7 +208,11 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 #home-content .showcase { display: flex; flex-flow: column wrap; background-color: #F7FFF7; }
 
-#home-content .showcase .content { display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center; width: 100%; height: 35rem; padding: 2rem; overflow: hidden; background-color: #fff; }
+#home-content .showcase .c-middle { background: #FEE715; height: 30rem; display: flex; text-align: center; align-items: center; justify-content: center; }
+
+#home-content .showcase .c-middle h4 { color: #333; font: 400 3rem "Poppins", sans-serif; }
+
+#home-content .showcase .content { display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center; width: 100%; height: 30rem; padding: 2rem; overflow: hidden; background-color: #fff; margin: 0; }
 
 #home-content .showcase .content img { width: 30rem; float: left; }
 
@@ -218,7 +228,25 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
   #home-content .showcase .content .text h4 { font: 400 2rem "Poppins", sans-serif; color: #333; margin-bottom: 1rem; }
   #home-content .showcase .content .text p { font: 300 1.3rem "Roboto", sans-serif; } }
 
-#home-content .showcase #c-right { display: flex; flex-flow: row-reverse wrap !important; background-color: #2D2926; }
+#home-content .showcase #c-right { display: flex; flex-flow: row-reverse wrap !important; background-color: #2D2926; margin: 0; }
 
 #home-content .showcase #c-right .text h4, #home-content .showcase #c-right .text p { color: white; }
+
+#home-content .showcase .program-content { display: flex; flex-flow: column; justify-content: center; align-items: center; width: 100%; padding: 2rem; overflow: hidden; background-color: #fff; margin: 0; }
+
+#home-content .showcase .program-content h3 { font: 400 3rem "Poppins", sans-serif; color: #333; overflow: hidden; }
+
+#home-content .showcase .program-content .cards-content { overflow: hidden; margin-top: 4rem; display: flex; flex-flow: row wrap; justify-content: center; }
+
+#home-content .showcase .program-content .cards-content .card { width: 20rem; height: 15rem; margin: 2rem; text-align: center; overflow: hidden; border-radius: 5px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); transition: all 0.5s; }
+
+#home-content .showcase .program-content .cards-content .card:hover { transform: scale(1.2); }
+
+#home-content .showcase .program-content .cards-content .card img { width: 100%; height: 75%; }
+
+#home-content .showcase .program-content .cards-content .card h5 { font: 400 1.2rem "Poppins", sans-serif; }
+
+#home-content .showcase .program-content .cards-content .card p { font: 400 1rem "Roboto", sans-serif; }
+
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #home-content .showcase .program-content .cards-content { flex-flow: column wrap; } }
 /*# sourceMappingURL=styles.css.map */

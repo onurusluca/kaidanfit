@@ -9,7 +9,7 @@ main {
 
     @media #{$sm_mobile, $xs_mobile} {
         background-image: none;
-        background: rgb(118, 255, 253);
+        background: rgba(75, 153, 206, 0.267);
         height: 100vh;
     }
 
@@ -39,18 +39,12 @@ main {
 
 //JUMBOTRON
 #jumbotron {
-    margin-top: 18rem;
+    margin-top: 15rem;
     margin-left: 3rem;
     text-align: center;
     align-items: center;
     float: left;
     width: 60%;
-
-    @media #{$large_mobile} {
-        width: 65%;
-        margin-top: 6rem;
-
-    }
 
     @media #{$xs_mobile, $sm_mobile} {
         width: 90%;
@@ -59,6 +53,28 @@ main {
         margin-left: 1rem;
 
     }
+
+    @media #{$large_mobile} {
+        width: 65%;
+        margin-top: 10rem;
+
+    }
+
+
+    @media #{$tab_device} {
+        width: 65%;
+        margin-top: 15rem;
+        margin-left: 1rem;
+
+    }
+
+    @media #{$medium_device} {
+        width: 65%;
+        margin-top: 12rem;
+        margin-left: 1rem;
+
+    }
+
 
 
 
@@ -125,26 +141,27 @@ main {
     }
 
     .myButton {
-        background-color: rgb(6, 192, 84);
+        background-color: $primary_color;
         border-radius: 4px;
         display: inline-block;
         cursor: pointer;
-        color: #ffffff;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.86);
-        font: 300 18px $primary_font;
+        color: $black_color;
+        font: 400 18px $primary_font;
         margin-top: 4rem;
+
         padding: 16px 31px;
         text-decoration: none;
         transition: all 300ms;
 
         @media #{$xs_mobile, $sm_mobile} {
-            margin-top: 1rem;
+            margin-top: 2rem;
 
         }
     }
 
     .myButton:hover {
-        background-color: rgb(5, 170, 74);
+        background-color: $black_color;
+        color: white;
     }
 
     .myButton:active {
@@ -169,86 +186,161 @@ main {
         flex-flow: column wrap;
         background-color: #F7FFF7;
 
-        .content {
+        .c-middle {
+            background: $primary_color;
+            height: 30rem;
             display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
+            text-align: center;
             align-items: center;
-            width: 100%;
-            height: 35rem;
-            padding: 2rem;
-            overflow: hidden;
-            background-color: #fff;
+            justify-content: center;
 
-            img {
-                width: 30rem;
-                float: left;
+            h4 {
+                color: $black_color;
+                font: 400 3rem $primary_font;
+
             }
-
-            .text {
+        }
+            .content {
                 display: flex;
-                flex-flow: column;
-                text-align: center;
-                width: 35rem;
-
-                h4 {
-                    font: 400 3rem $primary_font;
-                    color: $black_color;
-                }
-
-                p {
-                    font: 300 1.5rem $secondary_font;
-
-                }
-            }
-
-            //Media queries
-            @media #{$xs_mobile, $sm_mobile, $large_mobile, $tab_device, $medium_device} {
+                flex-flow: row wrap;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
                 height: 30rem;
-                margin: 1rem 0;
+                padding: 2rem;
                 overflow: hidden;
-                padding: 1.5rem;
+                background-color: #fff;
+                margin: 0;
 
                 img {
-                    width: 20rem;
+                    width: 30rem;
+                    float: left;
                 }
 
                 .text {
-                    width: 32rem;
+                    display: flex;
+                    flex-flow: column;
+                    text-align: center;
+                    width: 35rem;
 
                     h4 {
-                        font: 400 2rem $primary_font;
+                        font: 400 3rem $primary_font;
                         color: $black_color;
-                        margin-bottom: 1rem;
                     }
 
                     p {
-                        font: 300 1.3rem $secondary_font;
+                        font: 300 1.5rem $secondary_font;
 
+                    }
+                }
+
+
+            
+                //Media queries
+                @media #{$xs_mobile, $sm_mobile, $large_mobile, $tab_device, $medium_device} {
+                    height: 30rem;
+                    margin: 1rem 0;
+                    overflow: hidden;
+                    padding: 1.5rem;
+
+                    img {
+                        width: 20rem;
+                    }
+
+                    .text {
+                        width: 32rem;
+
+                        h4 {
+                            font: 400 2rem $primary_font;
+                            color: $black_color;
+                            margin-bottom: 1rem;
+                        }
+
+                        p {
+                            font: 300 1.3rem $secondary_font;
+
+                        }
+                    }
+                }
+
+            }
+
+            #c-right {
+                display: flex;
+                flex-flow: row-reverse wrap !important;
+                background-color: #2D2926;
+                margin: 0;
+
+                .text {
+
+                    h4,
+                    p {
+                        color: white;
                     }
                 }
             }
 
-        }
-
-        #c-right {
-            display: flex;
-            flex-flow: row-reverse wrap !important;
-            background-color: #2D2926;
-
-            .text {
-
-                h4,
-                p {
-                    color: white;
+            .program-content {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 2rem;
+                overflow: hidden;
+                background-color: #fff;
+                margin: 0;
+        
+                h3 {
+                    font: 400 3rem $primary_font;
+                    color: $black_color;
+                    overflow: hidden;
                 }
+                .cards-content {
+                    overflow: hidden;
+                    margin-top: 4rem;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+
+                    .card {
+                        width: 20rem;
+                        height: 15rem;
+                        margin: 2rem;
+                        text-align: center;
+                        overflow: hidden;
+                        border-radius: 5px;
+                        background-color: white;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        transition: all 0.5s;
+
+                        &:hover {
+                           transform: scale(1.2);
+                       }
+                        img {
+                            width: 100%;
+                            height: 75%;
+                        }
+
+                        h5 {
+                            font: 400 1.2rem $primary_font;
+                        }
+
+                        p {
+                            font: 400 1rem $secondary_font;
+                        }
+                    }
+
+                    @media #{$xs_mobile, $sm_mobile, $large_mobile} {
+                        flex-flow: column wrap;
+
+                    }
+
+                }
+              
             }
 
-            @media #{$xs_mobile, $sm_mobile, $large_mobile} {}
-
         }
+    
 
-
-
-    }
 }
