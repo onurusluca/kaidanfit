@@ -1,3 +1,5 @@
+
+
 main {
     margin: 0;
     width: 100%;
@@ -9,8 +11,27 @@ main {
 
     @media #{$sm_mobile, $xs_mobile} {
         background-image: none;
-        background: rgba(75, 153, 206, 0.267);
         height: 100vh;
+        @keyframes color-change-5x {
+            0% {
+              background: #19dceaad;
+            }
+            25% {
+              background: #b22cffad;
+            }
+            50% {
+              background: #ea2222ad;
+            }
+            75% {
+              background: #f5c010ad;
+            }
+            100% {
+              background: #3cd80daf;
+            }
+          }
+          
+        animation: color-change-5x 15s linear 1s infinite alternate both;
+
     }
 
 
@@ -175,6 +196,7 @@ main {
 //MAIN CONTENT OF HOME PAGE
 #home-content {
 
+
     h2 {
         text-align: center;
         font: 400 3rem $primary_font;
@@ -200,147 +222,153 @@ main {
 
             }
         }
-            .content {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-around;
-                align-items: center;
-                width: 100%;
-                height: 30rem;
-                padding: 2rem;
-                overflow: hidden;
-                background-color: #fff;
-                margin: 0;
 
-                img {
-                    width: 30rem;
-                    float: left;
-                }
+        .content {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 30rem;
+            padding: 2rem;
+            overflow: hidden;
+            background-color: #fff;
+            margin: 0;
 
-                .text {
-                    display: flex;
-                    flex-flow: column;
-                    text-align: center;
-                    width: 35rem;
-
-                    h4 {
-                        font: 400 3rem $primary_font;
-                        color: $black_color;
-                    }
-
-                    p {
-                        font: 300 1.5rem $secondary_font;
-
-                    }
-                }
-
-
-            
-                //Media queries
-                @media #{$xs_mobile, $sm_mobile, $large_mobile, $tab_device, $medium_device} {
-                    height: 30rem;
-                    margin: 1rem 0;
-                    overflow: hidden;
-                    padding: 1.5rem;
-
-                    img {
-                        width: 20rem;
-                    }
-
-                    .text {
-                        width: 32rem;
-
-                        h4 {
-                            font: 400 2rem $primary_font;
-                            color: $black_color;
-                            margin-bottom: 1rem;
-                        }
-
-                        p {
-                            font: 300 1.3rem $secondary_font;
-
-                        }
-                    }
-                }
-
+            img {
+                width: 30rem;
+                float: left;
             }
 
-            #c-right {
-                display: flex;
-                flex-flow: row-reverse wrap !important;
-                background-color: #2D2926;
-                margin: 0;
-
-                .text {
-
-                    h4,
-                    p {
-                        color: white;
-                    }
-                }
-            }
-
-            .program-content {
+            .text {
                 display: flex;
                 flex-flow: column;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                padding: 2rem;
-                overflow: hidden;
-                background-color: #fff;
-                margin: 0;
-        
-                h3 {
+                text-align: center;
+                width: 35rem;
+
+                h4 {
                     font: 400 3rem $primary_font;
                     color: $black_color;
-                    overflow: hidden;
                 }
-                .cards-content {
-                    overflow: hidden;
-                    margin-top: 4rem;
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: center;
 
-                    .card {
-                        width: 20rem;
-                        height: 15rem;
-                        margin: 2rem;
-                        text-align: center;
-                        overflow: hidden;
-                        border-radius: 5px;
-                        background-color: white;
-                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                        transition: all 0.5s;
-
-                        &:hover {
-                           transform: scale(1.2);
-                       }
-                        img {
-                            width: 100%;
-                            height: 75%;
-                        }
-
-                        h5 {
-                            font: 400 1.2rem $primary_font;
-                        }
-
-                        p {
-                            font: 400 1rem $secondary_font;
-                        }
-                    }
-
-                    @media #{$xs_mobile, $sm_mobile, $large_mobile} {
-                        flex-flow: column wrap;
-
-                    }
+                p {
+                    font: 300 1.5rem $secondary_font;
 
                 }
-              
+            }
+
+
+
+            //Media queries
+            @media #{$xs_mobile, $sm_mobile, $large_mobile, $tab_device, $medium_device} {
+                height: 30rem;
+                margin: 1rem 0;
+                overflow: hidden;
+                padding: 1.5rem;
+
+                img {
+                    width: 20rem;
+                }
+
+                .text {
+                    width: 32rem;
+
+                    h4 {
+                        font: 400 2rem $primary_font;
+                        color: $black_color;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        font: 300 1.3rem $secondary_font;
+
+                    }
+                }
             }
 
         }
-    
 
+        #c-right {
+            display: flex;
+            flex-flow: row-reverse wrap !important;
+            background-color: #2D2926;
+            margin: 0;
+
+            .text {
+
+                h4,
+                p {
+                    color: white;
+                }
+            }
+        }
+
+        .program-content {
+            align-self: center;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            overflow: hidden;
+            background-color: #fff;
+            margin: 0;
+
+            h3 {
+                font: 400 3rem $primary_font;
+                color: $black_color;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .cards-content {
+                width: 100%;
+                overflow: hidden;
+                margin-top: 4rem;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+
+                .card {
+                    width: 20rem;
+                    height: 15rem;
+                    margin: 1.5rem;
+                    text-align: center;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    background-color: white;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    transition: all 0.5s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 75%;
+                    }
+
+                    h5 {
+                        font: 400 1.2rem $primary_font;
+                    }
+
+                    p {
+                        font: 400 1rem $secondary_font;
+                    }
+                }
+
+                @media #{$xs_mobile, $sm_mobile, $large_mobile} {
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    .card {
+                       align-self: center;
+                    }
+                    
+
+                }
+            }
+        }
+    }
 }

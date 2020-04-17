@@ -103,7 +103,7 @@
     //Inputs for menu toggle
 
     #nav-1:checked~label {
-      color: #3FC0BE;
+      color: #0ACDFF;
       overflow: auto;
 
       ul {
@@ -117,7 +117,7 @@
     }
 
     #nav-2:checked~label {
-      color: #3FC0BE;
+      color: #0ACDFF;
       overflow: auto;
 
       ul {
@@ -131,7 +131,7 @@
     }
 
     #nav-3:checked~label {
-      color: #3FC0BE;
+      color: #0ACDFF;
       overflow: auto;
     }
 
@@ -255,7 +255,7 @@
         transition-delay: 100ms;
 
         i {
-          background-color: #3FC0BE;
+          background-color: #0ACDFF;
 
           &:nth-child(1) {
             transform: rotate(45deg) translate(6px, 11px);
@@ -325,6 +325,7 @@
   margin-left: 1rem;
   margin-top: -0.5rem;
   transition: all 0.5s;
+ 
   &:hover {
     transform: scale(1.1);  }
   img {

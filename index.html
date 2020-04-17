@@ -31,19 +31,25 @@
     <!-- Fontawesome-->
     <script src="https://kit.fontawesome.com/7d50e3174f.js" crossorigin="anonymous"></script>
 
-    <!-- Styles -->
-
-    <!-- main stylesheet -->
-    <link href="assets/css/styles.css" media="screen and (-webkit-min-device-pixel-ratio:0)" rel="stylesheet">
-
     <!-- Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
+
+    <!-- Styles -->
+
+    <link href="assets/css/styles.css" media="screen and (-webkit-min-device-pixel-ratio:0)" rel="stylesheet">
+    <!-- main stylesheet -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- AOS CDN -->
+
+
+
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script> <!-- main script -->
+   
     <!-- end of scripts -->
 
 
@@ -72,7 +78,7 @@
 
     <!-- Content -->
     <main>
-        <a href="./index.html" class="nav-link" id="brand-logo"><img src="/assets/img/main-logo.png"
+        <a href="./index.html" class="nav-link" id="brand-logo" ><img src="/assets/img/main-logo.png"
                 alt="KaidanFit Logosu"></a>
         <div id="jumbotron">
             <img id="mobile-main-image" src="/assets/img/landing-page/mobile-main-image.svg" alt="">
@@ -87,13 +93,13 @@
     <div id="home-content">
         <div class="showcase">
 
-            <div class="c-middle">
+            <div data-aos="fade-down" class="c-middle" >
                 <div class="text">
                     <h4>Pahalı spor ekipmanlarına gerek yok!</h4>
                 </div>
             </div>
 
-            <div class="content" id="c-left">
+            <div class="content" data-aos="fade-left" id="c-left">
                 <img src="/assets/img/landing-page/showcase-1.svg" alt="">
                 <div class="text">
                     <h4>Uygulanabilir Yöntemler</h4>
@@ -103,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="content" id="c-right">
+            <div class="content" data-aos="fade-right" id="c-right">
                 <img src="/assets/img/landing-page/showcase-1.svg" alt="">
                 <div class="text">
                     <h4>Kişiye Özel Programlar </h4>
@@ -113,13 +119,13 @@
             </div>
 
 
-            <div class="c-middle">
+            <div data-aos="fade-down" class="c-middle">
                 <div class="text">
                     <h4>Spor salonuna gerek yok!</h4>
                 </div>
             </div>
 
-            <div class="content" id="c-left">
+            <div class="content" data-aos="fade-left" id="c-left">
                 <img src="/assets/img/landing-page/showcase-1.svg" alt="">
                 <div class="text">
                     <h4>Seviyeli İlerleme Sistemi</h4>
@@ -128,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="content" id="c-right">
+            <div class="content" data-aos="fade-right" id="c-right">
                 <img src="/assets/img/landing-page/showcase-1.svg" alt="">
                 <div class="text">
                     <h4>Türkiye şartlarına uygun ucuz diyetler</h4>
@@ -139,28 +145,28 @@
             <div class="program-content">
                 <h3>Spor Programları</h3>
                 <div class="cards-content">
-                    <div class="card">
+                    <div data-aos="zoom-in" class="card">
                         <img src="/assets/img/landing-page/pug1.jpg" alt="">
                         <h5>Kilo Ver</h5>
-                        <p>Sfdg  hkhl l tyhet</p>
+                        <p>Sfdg hkhl l tyhet</p>
                     </div>
-                    <div class="card">
+                    <div data-aos="zoom-in" class="card">
                         <img src="/assets/img/landing-page/muscle.jpg" alt="">
                         <h5>Kas Yap</h5>
                         <p>Sfd sfg dd fs fasf</p>
                     </div>
-                    <div class="card">
+                    <div data-aos="zoom-in" class="card">
                         <img src="/assets/img/landing-page/thin.jpg" alt="">
                         <h5>Kilo Al</h5>
                         <p>S fsd gdsgsdg f</p>
                     </div>
-                    <div class="card">
+                    <div data-aos="zoom-in" class="card">
                         <img src="/assets/img/landing-page/fit.jpg" alt="">
                         <h5>Fit Ol</h5>
-                        <p>Ssdf  hlhjl sf</p>
+                        <p>Ssdf hlhjl sf</p>
                     </div>
                 </div>
-              
+
             </div>
 
 
@@ -182,7 +188,10 @@
                 Lütfen tarayıcınızı güncelleyin veya <a href="https://www.google.com.tr/search?q=taray%C4%B1c%C4%B1%20indir&oq=taray%C4%B1c%C4%B1%20indir&aqs=chrome.0.0j69i57j0l6.4486j0j7&sourceid=chrome&ie=UTF-8">yeni bir tarayıcı indirin</a>
                 </p>
         <![endif]-->
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!-- AOS JS -->
+        <script>
+            AOS.init();  /* AOS initialize */
+          </script>
 </body>
 
 </html>
