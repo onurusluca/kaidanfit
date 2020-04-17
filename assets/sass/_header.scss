@@ -7,7 +7,7 @@
   grid-template-columns: 3fr 3fr 3fr 1.5fr;
   height: 0;
   opacity: 1;
-  transition: 300ms all;
+  transition: 200ms all;
   width: 100%;
 
   //Media queries
@@ -351,7 +351,9 @@
       background-color: white;
       height: 0;
       width: auto;
-      opacity: 1;
+      opacity: 0;
+      border: 1px solid rgba(51, 51, 51, 0.479);
+
 
       li {
         display: flex;
@@ -377,6 +379,7 @@
 
       &:hover {
         height: auto;
+        opacity: 1;
 
       }
     }
@@ -406,6 +409,8 @@
 
       &:hover~.dropdown {
         height: auto;
+        opacity: 1;
+
       }
     }
   }

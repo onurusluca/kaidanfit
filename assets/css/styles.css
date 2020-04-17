@@ -18,7 +18,7 @@ body::-webkit-scrollbar-track { background: #333; }
 
 body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
-#bottom-tab-bar { position: fixed; bottom: 0; margin: 0; display: grid; grid-template-columns: 3fr 3fr 3fr 1.5fr; height: 0; opacity: 1; transition: 300ms all; width: 100%; }
+#bottom-tab-bar { position: fixed; bottom: 0; margin: 0; display: grid; grid-template-columns: 3fr 3fr 3fr 1.5fr; height: 0; opacity: 1; transition: 200ms all; width: 100%; }
 
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #bottom-tab-bar { height: 3.3rem; overflow: visible; background-color: white; z-index: 860; } }
 
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row { color: #333; }
 
-.nav-bar #nav-menu .nav-row .dropdown { text-align: center; position: fixed; top: 4rem; margin-left: -2em; border-radius: 4px; background-color: white; height: 0; width: auto; opacity: 1; }
+.nav-bar #nav-menu .nav-row .dropdown { text-align: center; position: fixed; top: 4rem; margin-left: -2em; border-radius: 4px; background-color: white; height: 0; width: auto; opacity: 0; border: 1px solid rgba(51, 51, 51, 0.479); }
 
 .nav-bar #nav-menu .nav-row .dropdown li { display: flex; justify-content: center; align-items: center; border-bottom: 1px solid #dddbdb; height: 3em; overflow: visible; }
 
@@ -124,7 +124,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row .dropdown li .dropdown-links { color: #2f2f30; display: inline-flex; font: 300 16px "Poppins", sans-serif; text-decoration: none; margin: auto 2em; }
 
-.nav-bar #nav-menu .nav-row .dropdown:hover { height: auto; }
+.nav-bar #nav-menu .nav-row .dropdown:hover { height: auto; opacity: 1; }
 
 .nav-bar #nav-menu .nav-row .nav-link { display: inline-flex; align-items: center; flex-flow: nowrap; font-weight: 400; font-size: 1.1em; transition: all 200ms ease; color: #333; font-family: "Poppins", sans-serif; padding: 1em; }
 
@@ -132,7 +132,7 @@ body::-webkit-scrollbar-thumb { background: #FEE715; width: 1.85rem; }
 
 .nav-bar #nav-menu .nav-row .nav-link i { font-size: 1em; margin-bottom: -3px; margin-left: 4px; }
 
-.nav-bar #nav-menu .nav-row .nav-link:hover ~ .dropdown { height: auto; }
+.nav-bar #nav-menu .nav-row .nav-link:hover ~ .dropdown { height: auto; opacity: 1; }
 
 .nav-bar.scrolled { height: 4rem; background: white; transition: 0.35s all ease-in; }
 
@@ -199,15 +199,15 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 @media (max-width: 420px) { #jumbotron h2 { font-size: 1.3rem; } }
 
-#jumbotron .myButton { background-color: #FEE715; border-radius: 4px; display: inline-block; cursor: pointer; color: #333; font: 400 18px "Poppins", sans-serif; margin-top: 4rem; padding: 16px 31px; text-decoration: none; transition: all 300ms; }
+.myButton { background-color: #FEE715; border-radius: 4px; display: inline-block; cursor: pointer; color: #333; font: 400 18px "Poppins", sans-serif; margin-top: 4rem; padding: 16px 31px; text-decoration: none; transition: all 300ms; }
 
-@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { #jumbotron .myButton { margin-top: 2rem; } }
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px) { .myButton { margin-top: 2rem; } }
 
-#jumbotron .myButton:hover { background-color: #333; color: white; }
+.myButton:hover { background-color: #333; color: white; }
 
-#jumbotron .myButton:active { position: relative; top: 1px; }
+.myButton:active { position: relative; top: 1px; }
 
-#home-content { position: relative; z-index: 10; margin-bottom: 5rem; }
+#home-content { position: relative; z-index: 10; }
 
 #home-content h2 { text-align: center; font: 400 3rem "Poppins", sans-serif; }
 
@@ -223,7 +223,7 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 
 #home-content .showcase .content img { width: 30rem; float: left; }
 
-#home-content .showcase .content .text { display: flex; flex-flow: column; text-align: center; width: 35rem; }
+#home-content .showcase .content .text { display: flex; flex-flow: column; text-align: center; width: 45rem; }
 
 #home-content .showcase .content .text h4 { font: 400 3rem "Poppins", sans-serif; color: #333; }
 
@@ -232,20 +232,20 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1200px) { #home-content .showcase .content { height: 30rem; margin: 1rem 0; overflow: hidden; padding: 1.5rem; }
   #home-content .showcase .content img { width: 20rem; }
   #home-content .showcase .content .text { width: 32rem; }
-  #home-content .showcase .content .text h4 { font: 400 2rem "Poppins", sans-serif !important; color: #333; margin-bottom: 1rem; }
+  #home-content .showcase .content .text h4 { font: 400 2rem "Poppins", sans-serif; color: #333; margin-bottom: 1rem; }
   #home-content .showcase .content .text p { font: 300 1.3rem "Roboto", sans-serif; } }
 
-#home-content .showcase #c-right { display: flex; flex-flow: row-reverse wrap !important; background-color: #2D2926; margin: 0; }
+#home-content .showcase #c-right { display: flex; flex-flow: row-reverse wrap; background-color: #2D2926; margin: 0; }
 
 #home-content .showcase #c-right .text h4, #home-content .showcase #c-right .text p { color: white; }
 
-#home-content .showcase .program-content { align-self: center; display: flex; flex-flow: column; justify-content: center; align-items: center; width: 100%; padding: 1rem; overflow: hidden; background-color: #fff; margin: 0; }
+#home-content .showcase .program-content { align-self: center; display: flex; flex-flow: column; justify-content: center; align-items: center; width: 100%; padding: 1rem; overflow: hidden; background-color: white; margin: 0; }
 
-#home-content .showcase .program-content h3 { font: 400 3rem "Poppins", sans-serif; color: #333; overflow: hidden; text-align: center; }
+#home-content .showcase .program-content h3 { font: 400 3rem "Poppins", sans-serif; color: #333; overflow: hidden; text-align: center; margin: 1rem; }
 
 #home-content .showcase .program-content .cards-content { width: 100%; overflow: hidden; margin-top: 4rem; display: flex; flex-flow: row wrap; justify-content: space-around; }
 
-#home-content .showcase .program-content .cards-content .card { width: 20rem; height: 15rem; margin: 1.5rem; text-align: center; overflow: hidden; border-radius: 5px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); transition: all 0.5s; }
+#home-content .showcase .program-content .cards-content .card { width: 20rem; height: 15rem; margin: 1rem 1rem 2.5rem 1rem; text-align: center; overflow: hidden; border-radius: 5px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); transition: all 0.5s; }
 
 #home-content .showcase .program-content .cards-content .card:hover { transform: scale(1.2); }
 
@@ -258,9 +258,17 @@ main { margin: 0; width: 100%; height: 120vh; background-image: url(/assets/img/
 @media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px) { #home-content .showcase .program-content .cards-content { flex-flow: column wrap; justify-content: center; }
   #home-content .showcase .program-content .cards-content .card { align-self: center; } }
 
+#home-content .showcase #beslenme-cards { background-color: #333; }
+
+#home-content .showcase #beslenme-cards h3 { color: white; }
+
+#home-content .showcase #slogan3 { background-color: white; }
+
+#home-content .showcase #slogan3 p { font-size: 2rem; }
+
 footer { width: 100%; height: auto; background: #333; display: flex; justify-content: center; flex-flow: column nowrap; align-items: center; overflow: hidden; }
 
-footer .footer-element { display: flex; flex-flow: row wrap; margin: 3rem; justify-content: center; overflow: hidden; }
+footer .footer-element { display: flex; flex-flow: row wrap; margin: 8rem 0 3rem 0; justify-content: center; overflow: hidden; }
 
 footer .footer-element h2 { color: #FEE715; margin: 0 3rem; font-size: 3rem; text-align: center; cursor: pointer; transition: all 0.4s; }
 
@@ -270,7 +278,7 @@ footer .footer-element ul { display: flex; flex-flow: row nowrap; align-items: c
 
 footer .footer-element ul li { width: 5rem; display: flex; flex-flow: nowrap; text-align: center; justify-content: center; margin: 1rem; overflow: visible; }
 
-footer .footer-element ul li a { color: white; transition: all 0.4s; }
+footer .footer-element ul li a { color: white; transition: all 0.4s; overflow: visible; }
 
 footer .footer-element ul li a:hover { color: #FEE715; }
 
@@ -280,7 +288,9 @@ footer .copyright { margin: 0.5rem; overflow: visible; }
 
 footer .copyright p { text-align: center; color: white; margin: 1rem 0 0.1rem 0; font-size: 14px; opacity: 0.6; }
 
-@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1200px) { footer .footer-element { margin: 2rem; }
+@media only screen and (min-width: 992px) and (max-width: 1200px) { footer .footer-element ul li { padding: 0; } }
+
+@media (max-width: 420px), only screen and (min-width: 421px) and (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) { footer .footer-element { margin: 2rem; }
   footer .footer-element h2 { font-size: 2.5rem; width: 100%; }
-  footer .footer-element ul li { width: auto; } }
+  footer .footer-element ul li { width: 4rem; } }
 /*# sourceMappingURL=styles.css.map */
