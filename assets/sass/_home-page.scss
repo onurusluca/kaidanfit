@@ -7,6 +7,8 @@ main {
     background-image: url(/assets/img/landing-page/main-photo.png);
     background-position: center;
     background-size: cover;
+    position: relative;
+    z-index: 10;
 
 
     @media #{$sm_mobile, $xs_mobile} {
@@ -14,19 +16,19 @@ main {
         height: 100vh;
         @keyframes color-change-5x {
             0% {
-              background: #19dceaad;
+              background: #19dcea7c;
             }
             25% {
-              background: #b22cffad;
+              background: #b22cff7c;
             }
             50% {
-              background: #ea2222ad;
+              background: #ea22227c;
             }
             75% {
-              background: #f5c010ad;
+              background: #8c87cc7c;
             }
             100% {
-              background: #3cd80daf;
+              background: #3cd80d7c;
             }
           }
           
@@ -195,8 +197,9 @@ main {
 
 //MAIN CONTENT OF HOME PAGE
 #home-content {
-
-
+    position: relative;
+    z-index: 10;
+    margin-bottom: 5rem;
     h2 {
         text-align: center;
         font: 400 3rem $primary_font;
@@ -215,11 +218,17 @@ main {
             text-align: center;
             align-items: center;
             justify-content: center;
+            padding: 1rem;
 
             h4 {
                 color: $black_color;
-                font: 400 3rem $primary_font;
+                font: 400 4rem $primary_font;
 
+            }
+            @media #{$xs_mobile, $sm_mobile} {
+                h4 {
+                    font-size: 2.5rem;
+                }
             }
         }
 
@@ -274,7 +283,7 @@ main {
                     width: 32rem;
 
                     h4 {
-                        font: 400 2rem $primary_font;
+                        font: 400 2rem $primary_font !important;
                         color: $black_color;
                         margin-bottom: 1rem;
                     }

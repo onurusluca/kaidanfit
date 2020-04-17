@@ -302,7 +302,6 @@
   top: 0;
   padding: 1rem 0;
   width: 100%;
-  height: 6rem;
   transition: 0.4s;
   display: none;
   z-index: 99;
@@ -315,7 +314,7 @@
 
   {
   display: block;
-  height: 4rem;
+  height: 6rem;
 }
 
 //Logo
@@ -395,7 +394,7 @@
       padding: 1em;
 
       &:hover {
-        color: rgb(83, 82, 82);
+        color: rgb(0, 0, 0);
       }
 
       //Chevron
@@ -414,9 +413,9 @@
 }
 
 
-//Shrink on scroll down
+//Shrink top navbar on scroll down
 .nav-bar.scrolled {
-  min-height: 30px;
+  height: 4rem;
   background: rgb(255, 255, 255);
   transition: 0.35s all ease-in;
 
@@ -432,12 +431,6 @@
     margin-top: -10px;
     transition: 0.25s all ease-in;
   }
-}
-
-body {
-  height: 1000px;
-  width: 100%;
-  background-color: #eee;
 }
 
 //Button for returning to top
@@ -459,7 +452,8 @@ body {
   z-index: 600;
 
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
-    bottom: 60px;
+    right: 15px;
+    bottom: 65px;
     width: 30px;
     height: 30px;
   }
@@ -493,3 +487,4 @@ body {
   opacity: 1;
   visibility: visible;
 }
+

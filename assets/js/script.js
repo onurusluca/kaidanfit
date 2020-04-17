@@ -8,26 +8,12 @@ $(window).on("scroll touchmove", function () {
     $('#nav-bar-toggle').toggleClass('scrolled', $(document).scrollTop() > 0);
 });
 
-/* Button for returning to top*/
-var btn = $('#button-up');
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 1000) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
 
-
-/*  Hide tab menu on on scroll down */
+/*  Hide tab menu and go to top button on on scroll down */
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('#bottom-tab-bar').outerHeight();
+var navbarHeight = $('#bottom-tab-bar, #button-up').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -45,14 +31,18 @@ function hasScrolled() {
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
-    // If they scrolled down and are past the navbar, add class .nav-up.
+    // If they scrolled down and are past the navbar, add class 
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('#bottom-tab-bar').removeClass('tab-bar-toggle').addClass('hide-tab-bar');
+        $('#button-up').removeClass('show').addClass('hide'); /* go to top button */
+
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('#bottom-tab-bar').removeClass('hide-tab-bar').addClass('tab-bar-toggle');
+            $('#button-up').removeClass('hide').addClass('show'); /* go to top button */
+
         }
     }
     lastScrollTop = st;

@@ -10,7 +10,7 @@ $primary_color: #FEE715;
 $secondary_color: #818181;
 
 
-$white_color: rgba(255, 255, 255, 0.733);
+$white_color: rgba(226, 221, 221, 0.733);
 $black_color: #333;
 
 $text-color: #2f2f30;
@@ -44,7 +44,7 @@ html{
     scroll-behavior: smooth;
     box-sizing: border-box;
     overflow-x: visible;
-    background-color: #F7FFF7;
+    background-color: rgba(231, 231, 231, 0.2);
 
 }
 
@@ -55,16 +55,20 @@ h2,
 h3,
 h4,
 h5 {
-    font: $primary_font;
+    font: 400 2rem $primary_font;
     color: $black_color;
 }
 
 p {
+    font-family: $secondary_font;
     color: $black_color;
+    font-weight: 400;
 }
 
 a {
     color: $black_color;
+    font-family: $secondary_font;
+
     text-decoration: none;
 }
 
