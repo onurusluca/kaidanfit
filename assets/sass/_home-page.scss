@@ -228,6 +228,9 @@ main {
                 font: 400 4rem $primary_font;
 
             }
+            span {
+                font-size: 1.5rem;
+            }
 
             @media #{$xs_mobile, $sm_mobile} {
                 h4 {
@@ -339,14 +342,15 @@ main {
             .cards-content {
                 width: 100%;
                 overflow: hidden;
-                margin-top: 4rem;
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: space-around;
-
+                align-items: center;
+                margin: 2rem;
+                padding: 3rem;
                 .card {
                     width: 20rem;
-                    height: 15rem;
+                    height: 20rem;
                     margin: 1rem 1rem 2.5rem 1rem;
                     text-align: center;
                     overflow: hidden;
@@ -360,12 +364,15 @@ main {
                     }
 
                     img {
-                        width: 100%;
-                        height: 75%;
+                        object-fit: cover;
+                        object-position: top;
+                        width: inherit;
+                        height: 80%;
                     }
 
                     h5 {
-                        font: 400 1.2rem $primary_font;
+                        font: 400 1.7rem $primary_font;
+                        margin: 1rem;
                     }
 
                     p {
@@ -379,6 +386,8 @@ main {
 
                     .card {
                         align-self: center;
+                        margin: 2rem 0;
+
                     }
 
 
