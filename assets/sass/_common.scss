@@ -34,7 +34,7 @@ $extra_big_screen: 'only screen and (min-width: 1200px)';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 body,

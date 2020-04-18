@@ -47,4 +47,10 @@ function hasScrolled() {
     }
     lastScrollTop = st;
 }
+var btn = $('#button-up');
+btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
 /* ---------------------------- */
