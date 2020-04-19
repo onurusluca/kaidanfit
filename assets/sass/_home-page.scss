@@ -129,7 +129,7 @@ main {
         color: $black_color;
         margin-bottom: 1rem;
         overflow: visible;
-        font: 400 3rem $primary_font;
+        font: 500 3rem $primary_font;
 
         @media #{$large_mobile} {
             font-size: 2rem;
@@ -265,6 +265,7 @@ main {
                 h4 {
                     font: 400 3rem $primary_font;
                     color: $black_color;
+                    margin-bottom: 3rem;
                 }
 
                 p {
@@ -336,7 +337,7 @@ main {
                 color: $black_color;
                 overflow: hidden;
                 text-align: center;
-                margin: 1rem;
+                margin: 2rem;
             }
 
             .cards-content {

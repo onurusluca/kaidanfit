@@ -47,6 +47,8 @@ function hasScrolled() {
     }
     lastScrollTop = st;
 }
+
+/* Go to top*/
 var btn = $('#button-up');
 btn.on('click', function(e) {
     e.preventDefault();
