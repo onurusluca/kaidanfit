@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="tr">
 
 <head>
     <meta charset="utf-8">
@@ -12,6 +12,8 @@
 
 
     <meta name="author" content="KaidanFit">
+    <meta http-equiv="content-language” content="tr">
+
     <meta name="keywords"
         content="kai, kaidan, kaidanfit, fit, fitness, beslenme, spor, vücut geliştirme, gym, kilo verme ">
 
@@ -26,7 +28,7 @@
     <meta property="og:type" content="article">
 
     <!-- Website Title -->
-    <title>KaidanFit - Fitness</title>
+    <title>KaidanFit - Fitness ve Beslenme</title>
 
     <!-- Fontawesome-->
     <script src="https://kit.fontawesome.com/7d50e3174f.js" crossorigin="anonymous"></script>
@@ -40,19 +42,22 @@
     <!-- Aos Styling -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- AOS CDN -->
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
     <script src="assets/js/script.js"></script> <!-- main script -->
     <!-- end of scripts -->
+    <noscript>Tarayıcınız JavaScript'i desteklemiyor! Tarayıcınızı güncelleyiniz veya yenisini indiriniz.</noscript>
 
-    <!-- Include Header and Footer -->
+
+    <!-- Include Header, Footer and Mobile Menu-->
     <script>
         $(function () {
-            $("#header").load("header.html");
+            $("#course-menu").load("course-menu.html");
             $("#footer").load("footer.html")
-            $("#course-menu").load("course-menu.html")
+            $("#mobile-menu").load("mobile-menu.html")
+
         })
     </script>
+    
     <!-- Favicon  -->
     <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
@@ -61,30 +66,9 @@
 </head>
 
 <body>
-    <!-- Placeholder for preloader -->
-
-    <!-- end of preloader -->
-
-    <!-- Header and menus-->
-    <div id="header"></div>
-    <div id="course-menu"></div>
-
-    <!-- end of header -->
-
-    <!-- Content -->
-    <div id="home-content">
-   
-        </div>
-    </div>
+ 
+ <div id="course-menu"></div>
     <!-- end of content -->
-
-
-    <!-- Footer -->
-
-    <div id="footer"></div>
-    <!-- end of footer -->
-
-
 
 
 
@@ -93,6 +77,10 @@
                 Lütfen tarayıcınızı güncelleyiniz veya <a href="https://www.google.com.tr/search?q=taray%C4%B1c%C4%B1%20indir&oq=taray%C4%B1c%C4%B1%20indir&aqs=chrome.0.0j69i57j0l6.4486j0j7&sourceid=chrome&ie=UTF-8">yeni bir tarayıcı indirin</a>
                 </p>
         <![endif]-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!-- AOS JS -->
+    <script>
+        AOS.init(); /* AOS initialize */
+    </script>
 </body>
 
 </html>

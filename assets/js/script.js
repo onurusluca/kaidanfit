@@ -56,3 +56,11 @@ btn.on('click', function(e) {
   });
 
 /* ---------------------------- */
+
+
+
+function addState() { 
+    let stateObj = { id: "100" }; 
+    window.history.pushState(stateObj, 
+             "Page 2", "/contet.html"); 
+} 

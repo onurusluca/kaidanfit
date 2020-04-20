@@ -106,13 +106,13 @@
 
       &:hover {
         color: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.089);
       }
 
       //Chevron
       i {
-        font-size: 1em;
-        margin-bottom: -3px;
-        margin-left: 4px;
+        font-size: 1.2em;
+        margin-left: 6px;
       }
 
       &:hover~.dropdown {
@@ -163,6 +163,7 @@
   visibility: hidden;
   overflow: hidden;
   z-index: 600;
+  border: 1px solid #333;
 
   @media #{$xs_mobile, $sm_mobile, $large_mobile} {
     right: 15px;
