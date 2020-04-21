@@ -62,14 +62,12 @@ btn.on('click', function (e) {
 
 /* Function for loading courses to div */
 $(document).ready(function () {
-    window.buttonLoadCourse = function (id, link) { /* Make the function global for callback outside of the function */
+     buttonLoadCourse = function (id, link) { 
         $(id).click(function () { 
             $(".course-content").load(link);
-        });
-    }
-});
-
+        })};
 /* Load the courses */
 buttonLoadCourse((".buttona"), ("aaaa.html") )
 buttonLoadCourse((".buttonb"), ("contet.html") )
 buttonLoadCourse((".buttonc"), ("footer.html") )
+});
