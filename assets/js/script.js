@@ -1,6 +1,6 @@
 /* Let only one tab bar menu open */
-$('input.nav-checks').on('change', function() {
-    $('input.nav-checks').not(this).prop('checked', false);  
+$('input.nav-checks').on('change', function () {
+    $('input.nav-checks').not(this).prop('checked', false);
 });
 
 /* Shrink navbar and change color on scroll down */
@@ -15,10 +15,10 @@ var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('#bottom-tab-bar, #button-up').outerHeight();
 
-$(window).scroll(function(event){
+$(window).scroll(function (event) {
     didScroll = true;
 });
-setInterval(function() {
+setInterval(function () {
     if (didScroll) {
         hasScrolled();
         didScroll = false;
@@ -27,19 +27,19 @@ setInterval(function() {
 
 function hasScrolled() {
     var st = $(this).scrollTop();
-    
+
     // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
+    if (Math.abs(lastScrollTop - st) <= delta)
         return;
     // If they scrolled down and are past the navbar, add class 
-    if (st > lastScrollTop && st > navbarHeight){
+    if (st > lastScrollTop && st > navbarHeight) {
         // Scroll Down
         $('#bottom-tab-bar').removeClass('tab-bar-toggle').addClass('hide-tab-bar');
         $('#button-up').removeClass('show').addClass('hide'); /* go to top button */
 
     } else {
         // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
+        if (st + $(window).height() < $(document).height()) {
             $('#bottom-tab-bar').removeClass('hide-tab-bar').addClass('tab-bar-toggle');
             $('#button-up').removeClass('hide').addClass('show'); /* go to top button */
 
@@ -50,17 +50,26 @@ function hasScrolled() {
 
 /* Go to top*/
 var btn = $('#button-up');
-btn.on('click', function(e) {
+btn.on('click', function (e) {
     e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
-  });
+    $('html, body').animate({
+        scrollTop: 0
+    }, '300');
+});
 
 /* ---------------------------- */
 
 
+/* Function for loading courses to div */
+$(document).ready(function () {
+    window.buttonLoadCourse = function (id, link) { /* Make the function global for callback outside of the function */
+        $(id).click(function () { 
+            $(".course-content").load(link);
+        });
+    }
+});
 
-function addState() { 
-    let stateObj = { id: "100" }; 
-    window.history.pushState(stateObj, 
-             "Page 2", "/contet.html"); 
-} 
+/* Load the courses */
+buttonLoadCourse((".buttona"), ("aaaa.html") )
+buttonLoadCourse((".buttonb"), ("contet.html") )
+buttonLoadCourse((".buttonc"), ("footer.html") )

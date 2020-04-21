@@ -126,7 +126,7 @@
                     width: inherit;
                     height: 3rem;
                     padding: 1rem;
-                    
+
 
                     &:hover {
                         background: rgba(0, 0, 0, 0.1);
@@ -228,11 +228,19 @@
             padding: 1rem;
             list-style-position: inside;
             border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+            cursor: pointer;
 
             &:hover {
                 background: rgba(254, 231, 21, 0.363);
             }
-            a {}
+
+            a {
+                cursor: pointer;
+                &:hover {
+                    background: rgba(254, 231, 21, 0.363);
+                }
+
+            }
         }
     }
 
@@ -249,7 +257,8 @@
 /* COURSE CONTENT */
 
 .course-content {
-    width: 80%;
+    width: 75%;
+    margin-right: 2rem;
     float: right;
     text-align: center;
     justify-content: center;
