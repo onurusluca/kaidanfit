@@ -16,7 +16,8 @@ main {
 
         @keyframes color-change-5x {
             0% {
-                background: #4643537a;
+                background: #3cd80d7c;
+
             }
 
             25% {
@@ -32,7 +33,7 @@ main {
             }
 
             100% {
-                background: #3cd80d7c;
+                background: #7c6fb371;
             }
         }
 
@@ -199,6 +200,7 @@ main {
     position: relative;
     top: 1px;
 }
+
 //MAIN CONTENT OF HOME PAGE
 #home-content {
     position: relative;
@@ -229,6 +231,7 @@ main {
                 font: 400 4rem $primary_font;
 
             }
+
             span {
                 font-size: 1.5rem;
             }
@@ -292,7 +295,7 @@ main {
                     width: 32rem;
 
                     h4 {
-                        font: 400 2rem $primary_font ;
+                        font: 400 2rem $primary_font;
                         color: $black_color;
                         margin-bottom: 1rem;
                     }
@@ -308,7 +311,7 @@ main {
 
         #c-right {
             display: flex;
-            flex-flow: row-reverse wrap ;
+            flex-flow: row-reverse wrap;
             background-color: #2D2926;
             margin: 0;
 
@@ -349,6 +352,7 @@ main {
                 justify-content: space-evenly;
                 align-items: center;
                 padding: 2rem;
+
                 .card {
                     width: 18rem;
                     height: 18rem;
@@ -384,12 +388,13 @@ main {
                 @media #{$xs_mobile, $sm_mobile, $large_mobile} {
                     flex-flow: column wrap;
                     justify-content: center;
-                  
+
                     .card {
                         width: 15rem;
                         height: 15rem;
                         align-self: center;
                         margin: 1rem 0;
+
                         h5 {
                             margin: 0;
                         }
@@ -404,6 +409,7 @@ main {
 
         #beslenme-cards {
             background-color: $black_color;
+
             h3 {
                 color: white;
             }
@@ -411,6 +417,7 @@ main {
 
         #slogan3 {
             background-color: white;
+
             p {
                 font-size: 2rem;
             }
