@@ -61,13 +61,13 @@ btn.on('click', function (e) {
 
 
 /* Function for loading courses to div */
-$(document).ready(function () {
-     buttonLoadCourse = function (id, link) { 
-        $(id).click(function () { 
-            $(".course-content").load(link);
-        })};
-/* Load the courses */
-buttonLoadCourse((".buttona"), ("aaaa.html") )
-buttonLoadCourse((".buttonb"), ("contet.html") )
-buttonLoadCourse((".buttonc"), ("footer.html") )
-});
+$('.loadLessonButton').on('click', function (clickEvent) {
+    // get the page link from the clicked button
+    var clickedButton = clickEvent.currentTarget;
+    var link = clickedButton.getAttribute('data-page');
+    $('.course-content').load(link);
+
+  })
+
+
+
