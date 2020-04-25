@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/spor-programları.scss"
+    ],
+    "names": [],
+    "file": "spor-programları.css"
+}

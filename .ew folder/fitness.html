@@ -12,7 +12,7 @@
 
 
     <meta name="author" content="KaidanFit">
-    <meta http-equiv="content-language” content=" tr">
+    <meta http-equiv="content-language” content="tr">
 
     <meta name="keywords"
         content="kai, kaidan, kaidanfit, fit, fitness, beslenme, spor, vücut geliştirme, gym, kilo verme ">
@@ -51,82 +51,27 @@
     <!-- Include Header, Footer and Mobile Menu-->
     <script>
         $(function () {
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
+            $("#course-menu").load("course-menu.html");
+            $("#footer").load("footer.html")
             $("#mobile-menu").load("mobile-menu.html")
 
-            /*   $("#course-menu").load("course-menu.html");
-              $("#footer").load("footer.html") */
         })
     </script>
-    <!--end of include Header, Footer and Mobile Menu-->
-
+    
     <!-- Favicon  -->
     <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
-    <!-- end of favicon  -->
 
 
 </head>
 
 <body>
-    <!-- Header and menus-->
-    <div id="header"></div>
-    <div id="mobile-menu"></div>
-    <!-- end of header -->
-    <div class="fitness-page">
-
-        <div class="title">
-            <img src="/assets/img/fitness-programları/fitness-main-menu.jpg" alt="">
-            <div class="text">
-                <h1>Fitness Spor Programları</h1>
-                <p>Amacınıza göre bir program seçin!</p>
-            </div>
-
-        </div>
-
-        <div class="programs-container">
-        <h4>Fit Ol</h4>
-            <div class="programs">
-                <div id="baslangic" class="program-container">
-                    <h2>Başlangıç Seviyesi</h2>
-                    <img src="assets/img/fitness-programları/fit-ol.jpg" alt="">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply
-                        dummy text of the printing and typesetting industry. </p>
-                    <a>Başlangıç Seviyesi</a>
-
-                </div>
-                <div id="orta" class="program-container">
-                    <h2>Orta Seviye</h2>
-                    <img src="assets/img/fitness-programları/fit-ol.jpg" alt="">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply
-                        dummy text of the printing and typesetting industry. </p>
-                    <a id="level-1">Başlangıç Seviyesi</a>
-
-                </div>
-                <div id="ileri" class="program-container">
-                    <h2>İleri Seviye</h2>
-                    <img src="assets/img/fitness-programları/fit-ol.jpg" alt="">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply
-                        dummy text of the printing and typesetting industry. </p>
-                    <a id="level-1">Başlangıç Seviyesi</a>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
+ 
+ <div id="course-menu"></div>
     <!-- end of content -->
 
 
-    <!-- Footer -->
-    <div id="footer"></div>
-    <!-- end of footer -->
 
-    <!-- Other scripts -->
     <!--[if lt IE 7]>
             <p class="browsehappy"><strong>Eski</strong> bir internet tarayıcısı kullanıyor gibisiniz. 
                 Lütfen tarayıcınızı güncelleyiniz veya <a href="https://www.google.com.tr/search?q=taray%C4%B1c%C4%B1%20indir&oq=taray%C4%B1c%C4%B1%20indir&aqs=chrome.0.0j69i57j0l6.4486j0j7&sourceid=chrome&ie=UTF-8">yeni bir tarayıcı indirin</a>
@@ -136,7 +81,6 @@
     <script>
         AOS.init(); /* AOS initialize */
     </script>
-    <!-- end of other scripts -->
 </body>
 
 </html>

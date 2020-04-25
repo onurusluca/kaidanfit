@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/course-menu.scss"
+    ],
+    "names": [],
+    "file": "course-menu.css"
+}
