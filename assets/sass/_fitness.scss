@@ -1,0 +1,138 @@
+.fitness-page {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    text-align: center;
+
+    .title {
+        width: 100%;
+        height: 30rem;
+        background: $black_color;
+
+        img {
+            width: 100%;
+            height: 30rem;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(40%);
+        }
+
+        .text {
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            right: 20%;
+
+            h1 {
+                font: 500 3.5rem $primary_font;
+                color: white;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font: 300 2rem $secondary_font;
+                color: white;
+            }
+
+        }
+
+    }
+
+  
+    .programs-container {
+
+        h4 {
+            margin-top: 2rem;
+            padding: 2rem;
+            font-size: 3rem;
+            width: 100%;
+            background: rgba(153, 153, 153, 0.37);
+            color: $black_color;
+        }
+    
+        .programs {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            justify-items: center;
+            padding: 1rem;
+            width: 100%;
+            height: 80vh;
+
+            .program-container {
+                width: 28rem;
+                height: 35rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+                text-align: center;
+                justify-items: center;
+                border-radius: 4px;
+                overflow: hidden;
+                transition: all 300ms;
+
+                h2 {
+                    font: 400 1.8rem $primary_font;
+                    padding: 1rem;
+                    margin-top: -3rem;
+
+                }
+
+                img {
+                    margin-top: -3rem;
+                    width: 100%;
+                    height: 15rem;
+                    object-fit: cover;
+
+                }
+
+                p {
+                    padding: 0 1rem;
+                }
+
+                a {
+                    display: block;
+                    position: relative;
+                    float: left;
+                    padding: 1rem;
+                    height: 3rem;
+                    align-self: center;
+                    overflow: visible;
+                    width: 60%;
+                    text-align: center;
+                    border-radius: 4px;
+                    transition: all 0.2s;
+                    cursor: pointer;
+                    background: $black_color;
+                    color: white;
+
+                    &:hover {
+                        box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+
+        }
+
+        #baslangic {
+            background: rgba(0, 255, 0, 0.356);
+
+        }
+
+        #orta {
+            background: #e6c01740;
+
+        }
+
+        #ileri {
+            background: #e6171740;
+
+        }
+
+    }
+
+}

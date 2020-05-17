@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=no">
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, maximum-scale=5">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
@@ -12,7 +12,7 @@
 
 
     <meta name="author" content="KaidanFit">
-    <meta http-equiv="content-language” content="tr">
+    <meta http-equiv="content-language” content=tr">
 
     <meta name="keywords"
         content="kai, kaidan, kaidanfit, fit, fitness, beslenme, spor, vücut geliştirme, gym, kilo verme ">
@@ -32,10 +32,47 @@
 
     <!-- Fontawesome-->
     <script src="https://kit.fontawesome.com/7d50e3174f.js" crossorigin="anonymous"></script>
+  
     <!-- Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet">
+    <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins|Roboto" as="fetch"
+        crossorigin="anonymous">
+    <script type="text/javascript">
+        ! function (e, n, t) {
+            "use strict";
+            var o = "https://fonts.googleapis.com/css?family=Poppins|Roboto",
+                r = "__3perf_googleFonts_6d190";
+
+            function c(e) {
+                (n.head || n.body).appendChild(e)
+            }
+
+            function a() {
+                var e = n.createElement("link");
+                e.href = o, e.rel = "stylesheet", c(e)
+            }
+
+            function f(e) {
+                if (!n.getElementById(r)) {
+                    var t = n.createElement("style");
+                    t.id = r, c(t)
+                }
+                n.getElementById(r).innerHTML = e
+            }
+            e.FontFace && e.FontFace.prototype.hasOwnProperty("display") ? (t[r] && f(t[r]), fetch(o).then(function (
+            e) {
+                return e.text()
+            }).then(function (e) {
+                return e.replace(/@font-face {/g, "@font-face{font-display:swap;")
+            }).then(function (e) {
+                return t[r] = e
+            }).then(f).catch(a)) : a()
+        }(window, document, localStorage);
+    </script>
+    <!-- End of code snippet for Google Fonts -->
+
     <!-- Styles -->
     <!-- main stylesheet -->
     <link href="assets/css/styles.css" media="screen and (-webkit-min-device-pixel-ratio:0)" rel="stylesheet">
@@ -52,15 +89,19 @@
     <script>
         $(function () {
             $("#header").load("header.html");
-            $("#footer").load("footer.html")
-            $("#mobile-menu").load("mobile-menu.html")
+            $("#footer").load("footer.html");
+            $("#mobile-menu").load("mobile-menu.html");
 
         })
     </script>
-    
+    <!--end of include Header, Footer and Mobile Menu-->
+
+
+
     <!-- Favicon  -->
     <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
+    <!-- end of favicon  -->
 
 
 </head>
@@ -73,8 +114,8 @@
     <!-- Header and menus-->
     <div id="header"></div>
     <div id="mobile-menu"></div>
-
     <!-- end of header -->
+    
     <!-- Content -->
     <main>
         <a href="./index.html" class="nav-link" id="brand-logo"><img src="/assets/img/main-logo.png"
@@ -92,7 +133,9 @@
     <div id="home-content">
         <div class="showcase">
 
-            <div data-aos="fade-down" class="c-middle">
+            <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="c-middle">
                 <div class="text">
                     <h4>Pahalı spor ekipmanlarına gerek yok!</h4>
                 </div>
@@ -118,7 +161,9 @@
             </div>
 
 
-            <div data-aos="fade-down" class="c-middle">
+            <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="c-middle">
                 <div class="text">
                     <h4>Spor salonuna gerek yok!</h4>
                 </div>
@@ -142,7 +187,9 @@
                 </div>
             </div>
 
-            <div data-aos="fade-down" class="c-middle">
+            <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="c-middle">
                 <div class="text">
                     <h4>BAHANE YOK! <br> Daha kaliteli bir yaşam için spor.</h4>
                 </div>
@@ -152,19 +199,27 @@
             <div class="program-content">
                 <h3>Spor Programları</h3>
                 <div class="cards-content">
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/slim-pug.jpg" alt="">
                         <h5>Kilo Ver</h5>
                     </div>
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/muscle-pug.jpg" alt="">
                         <h5>Kas Yap</h5>
                     </div>
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/fat-pug.jpg" alt="">
                         <h5>Kilo Al</h5>
                     </div>
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/fit-pug.jpg" alt="">
                         <h5>Fit Ol</h5>
                     </div>
@@ -176,19 +231,27 @@
             <div id="beslenme-cards" class="program-content">
                 <h3>Beslenme Programları</h3>
                 <div class="cards-content">
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/slim-cat.jpg" alt="">
                         <h5>Kilo Ver</h5>
                     </div>
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/muscle-cat.jpg" alt="">
                         <h5>Kas Yap</h5>
                     </div>
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/fat-cat.jpg" alt="">
                         <h5>Kilo Al</h5>
                     </div>
-                    <div data-aos="zoom-in" class="card">
+                    <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0" class="card">
                         <img src="/assets/img/landing-page/fit-cat.jpg" alt="">
                         <h5>Fit Ol</h5>
                     </div>
@@ -218,13 +281,8 @@
 
 
     <!-- Footer -->
-
     <div id="footer"></div>
     <!-- end of footer -->
-
-
-
-
 
     <!--[if lt IE 7]>
             <p class="browsehappy"><strong>Eski</strong> bir internet tarayıcısı kullanıyor gibisiniz. 

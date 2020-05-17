@@ -1,15 +1,13 @@
-
 //MAIN NAV BAR
 .nav-bar {
   background: none;
   overflow: hidden;
   position: fixed;
   top: 0;
-  padding: 1rem 0;
   width: 100%;
   transition: 0.4s;
   display: none;
-  z-index: 99;
+  z-index: 299;
 
   @media #{$tab_device, 
  $medium_device,
@@ -19,7 +17,7 @@
 
   {
   display: block;
-  height: 6rem;
+  height: 4rem;
 }
 
 //Logo
@@ -27,13 +25,15 @@
   display: block;
   float: left;
   margin-left: 1rem;
-  margin-top: -0.5rem;
-  transition: all 0.5s;
- 
+  margin-top: 0.5rem;
+  transition: all 0.4s;
+
   &:hover {
-    transform: scale(1.1);  }
+    transform: scale(1.05);
+  }
+
   img {
-    width: 13rem;
+    width: 11rem;
 
   }
 }
@@ -45,13 +45,16 @@
 
   .nav-row {
     color: $black_color;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 
     //Navbar link dropdowns
     .dropdown {
       text-align: center;
       position: fixed;
       top: 4rem;
-      margin-left: -2em;
       border-radius: 4px;
       background-color: white;
       height: 0;
@@ -62,23 +65,21 @@
 
       li {
         display: flex;
-        justify-content: center;
         align-items: center;
         border-bottom: 1px solid #dddbdb;
-        height: 3em;
         overflow: visible;
 
         &:hover {
-          background-color: #f8f7f7;
+          background-color: #d6d3d38c;
         }
 
         .dropdown-links {
-        
+          text-align: center;
           color: $text_color;
-          display: inline-flex;
           font: 300 16px $primary_font;
           text-decoration: none;
-          margin: auto 2em;
+          width: 14rem;
+          padding: 1rem;
         }
       }
 
@@ -99,11 +100,11 @@
       transition: all 200ms ease;
       color: $black_color;
       font-family: $primary_font;
-      padding: 1em;
+      padding: 1.5rem 1em;
 
       &:hover {
         color: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.089);
+        background: rgba(0, 0, 0, 0.137);
       }
 
       //Chevron
@@ -138,7 +139,7 @@
   }
 
   #nav-menu {
-    margin-top: -10px;
+    margin-top: -5px;
     transition: 0.25s all ease-in;
   }
 }
@@ -198,4 +199,3 @@
   opacity: 1;
   visibility: visible;
 }
-

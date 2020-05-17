@@ -180,7 +180,6 @@ main {
     color: $black_color;
     font: 400 18px $primary_font;
     margin-top: 4rem;
-
     padding: 16px 31px;
     text-decoration: none;
     transition: all 300ms;
@@ -196,10 +195,6 @@ main {
     color: white;
 }
 
-.myButton:active {
-    position: relative;
-    top: 1px;
-}
 
 //MAIN CONTENT OF HOME PAGE
 #home-content {

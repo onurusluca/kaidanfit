@@ -70,4 +70,3 @@ $('.loadLessonButton').on('click', function (clickEvent) {
   })
 
 
-
