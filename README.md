@@ -4,5 +4,5 @@ A fitness and diet program website with an innovative and mobile exclusive botto
 
 <a href="https://kaidanfit.netlify.app/" target=”_blank”>LIVE DEMO</a>
 
-https://onurusluca.me/
+https://onurusluca.dev/
 
